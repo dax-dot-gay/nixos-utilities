@@ -71,7 +71,7 @@
             nixosConfigurations = {
                 vms-router = nixpkgs.lib.nixosSystem {
                     inherit system;
-                    specialArgs = {inherit inputs;};
+                    specialArgs = {inherit inputs system;};
                     modules = [
                         "${nixpkgs}/nixos/modules/virtualisation/proxmox-image.nix"
                         self.nixosModules.router
@@ -80,5 +80,6 @@
                     ];
                 };
             };
+            packages.x86_64-linux.vms-router-vma = self.nixosConfigurations.vms-router.config.system.build.VMA;
         };
 }
