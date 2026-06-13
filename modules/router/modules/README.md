@@ -1,0 +1,184 @@
+# README
+
+## Sourced from [NixRTR/nixos-router](https://github.com/NixRTR/nixos-router)
+
+# NixOS Router Modules
+
+This directory contains modular components of the NixOS router configuration. Each module handles a specific aspect of the router's functionality.
+
+## Module Overview
+
+### `router.nix`
+
+**Core Networking** (Main router module)
+
+- WAN interface configuration (DHCP or PPPoE)
+- LAN bridge configuration (multiple isolated networks)
+- Firewall and NAT rules
+- Network isolation between bridges
+- Port forwarding
+- TCP/IP performance optimizations
+
+**What it does:**
+
+- Configures WAN connectivity (internet connection)
+- Creates multiple LAN bridges with physical interface assignments
+- Implements network segmentation and firewall rules
+- Enables NAT for internet access
+- Configures hardware offloading and TCP optimizations
+
+### `dns.nix`
+
+**DNS and DHCP Services (dnsmasq)**
+
+- Recursive DNS resolver with caching
+- DHCP server for dynamic IP assignment
+- Ad-blocking and malware protection via blocklists
+- Local domain support with wildcard DNS
+- Integrated DHCP-DNS registration
+
+**What it does:**
+
+- Runs separate DNS and DHCP instances for HOMELAB and LAN networks
+- Listens on bridge interfaces (ports 53 for DNS, 67 for DHCP)
+- Resolves local domains (_.homelab.local, _.lan.local)
+- Forwards DNS queries to upstream servers
+- Assigns IP addresses to devices via DHCP
+- Automatically registers DHCP clients in DNS
+- Blocks ads and malware via daily-updated blocklists
+- Provides DNS entries: domain, \*.domain, and router.domain
+- Supports static DHCP reservations
+
+### `dhcp.nix`
+
+**Legacy DHCP Configuration (Deprecated)**
+
+- This module is no longer used
+- DHCP functionality has been moved to `dns.nix` (dnsmasq)
+- Kept for reference only
+
+### `webui.nix` **NEW!**
+
+**Modern Web Dashboard (FastAPI + React)**
+
+- Real-time monitoring via WebSockets
+- PostgreSQL database for historical data and configuration (DNS, DHCP, Apprise, notifications)
+- Celery + Redis for background tasks (aggregation, notifications, port scanner, history cleanup)
+- System user authentication (PAM + JWT)
+- Flowbite React interface
+
+**What it does:**
+
+- Provides web-based monitoring and configuration management at http://router-ip:8080
+- **Monitoring:** System metrics (CPU, memory, load, uptime), live bandwidth per interface (WAN, HOMELAB, LAN), DHCP client list, service status (dnsmasq DNS/DHCP, PPPoE), device usage, speedtest, logs
+- **Configuration management:** DHCP (networks, static reservations), DNS (zones, records), CAKE traffic shaping, Apprise services, Dynamic DNS, port forwarding, blocklists and whitelist
+- Stores historical metrics for trend analysis; automatic database cleanup (configurable retention)
+- Mobile-responsive design with dark mode support
+
+**Key features:**
+
+- FastAPI backend with Python data collectors; Celery workers and Redis for background jobs and caching
+- React + TypeScript frontend with Flowbite components
+- WebSocket-based real-time updates
+- PostgreSQL with automatic migrations
+
+See `../webui/README.md` for full documentation.
+
+### `dashboard.nix`
+
+**Legacy Monitoring and Metrics**
+
+- Grafana: Web-based monitoring dashboard (port 3000)
+- Prometheus: Metrics collection and storage
+- Node Exporter: System and network metrics
+- Speedtest: Periodic internet speed tests
+
+**What it does:**
+
+- Provides real-time monitoring of router performance
+- Collects CPU, memory, network, and disk metrics
+- Runs automated speed tests every 6 hours
+- Creates visualizations for network traffic and system health
+
+**Note:** Consider using `webui.nix` instead for a more modern interface.
+
+### `linode-dyndns.nix`
+
+**Dynamic DNS Updates**
+
+- Automatic IP address detection
+- Linode DNS record updates via API
+- Change detection and logging
+- Configurable update intervals
+
+**What it does:**
+
+- Monitors public IP address changes
+- Updates Linode DNS records automatically
+- Runs every 5 minutes to keep DNS in sync
+- Logs all IP changes to system journal
+
+### `users.nix`
+
+**User Account Management**
+
+- Creates system user account
+- Configures sudo privileges
+- Auto-login on console
+- Password synchronization with sops secrets
+
+**What it does:**
+
+- Sets up the router administrator account
+- Enables passwordless sudo for admin user
+- Automatically logs in admin user on boot
+- Syncs password from encrypted secrets
+
+### `secrets.nix`
+
+**Secrets Management (sops-nix)**
+
+- User password (required)
+- PPPoE credentials (conditional)
+- Linode API token (conditional)
+
+**What it does:**
+
+- Manages encrypted secrets using age encryption
+- Automatically generates encryption key on first boot
+- Makes secrets available to system services
+- Only enables secrets that are needed based on configuration
+
+## Adding New Modules
+
+When creating a new module:
+
+1. Create a `.nix` file in this directory
+2. Import it in `../configuration.nix`
+3. Keep it focused on a single responsibility
+4. Use `routerConfig` from `../router-config.nix` for user-configurable values
+5. Document what it does in this README
+
+## Module Dependencies
+
+```
+configuration.nix
+├── hardware-configuration.nix (generated by nixos-generate-config)
+└── modules/
+    ├── secrets.nix (loaded early for sops encryption)
+    ├── users.nix (depends on secrets)
+    ├── router.nix (core networking, creates bridges)
+    ├── dns.nix (depends on router bridges, handles both DNS and DHCP)
+    ├── dhcp.nix (deprecated, kept for reference only)
+    ├── webui.nix (optional, modern monitoring dashboard)
+    ├── dashboard.nix (optional, legacy monitoring with Grafana)
+    └── linode-dyndns.nix (optional, depends on secrets)
+```
+
+## Best Practices
+
+- **Keep modules independent**: Avoid circular dependencies between modules
+- **Use conditionals**: Enable features only when needed (see `secrets.nix`)
+- **Document configuration**: Add comments explaining non-obvious settings
+- **Test changes**: Always test in a VM before deploying to production
+- **Follow NixOS conventions**: Use standard service options when available
