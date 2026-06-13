@@ -20,7 +20,7 @@
                 interface = "ens18";
             };
             lan = {
-                isolation.enable = false;
+                isolation.enable = true;
                 networks = {
                     main = {
                         ipv4 = {
@@ -52,8 +52,6 @@
             };
             nat = {
                 enable = true;
-                externalInterface = "ens18";
-                internalInterfaces = [ "ens19" ];
             };
             dns = {
                 enable = true;
