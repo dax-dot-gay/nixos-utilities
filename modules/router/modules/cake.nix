@@ -3,7 +3,7 @@
 with lib;
 
 let
-  routerConfig = import ../router-config.nix;
+  routerConfig = config.flake.nixos-utilities.systems.router.config;
   cakeConfig = routerConfig.wan.cake or { enable = false; };
   
   # Determine WAN interface (same logic as router.nix for NAT)

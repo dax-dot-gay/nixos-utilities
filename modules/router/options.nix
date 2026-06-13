@@ -50,7 +50,9 @@ let
                 type = types.enum [
                     "dhcp"
                     "pppoe"
+                    "static"
                 ];
+                default = "dhcp";
             };
             interface = mkOption {
                 description = "WAN interface";
@@ -64,36 +66,87 @@ let
                     enable = false;
                 };
             };
-        };
-    };
-
-    # Configuration of LAN IP space
-    lanIpConfiguration =
-        enabled:
-        (types.submodule {
-            options = {
-                enable = mkOption {
-                    description = "Enable this IP version";
-                    type = types.bool;
-                    default = enabled;
+            static = {
+                ipv4 = {
+                    address = mkOption {
+                        type = types.str;
+                        default = "203.0.113.2";
+                        description = "Static IPv4 address assigned to the WAN interface.";
+                    };
+                    prefixLength = mkOption {
+                        type = types.int;
+                        default = 24;
+                        description = "Prefix length for the static IPv4 network.";
+                    };
+                    gateway = mkOption {
+                        type = types.nullOr types.str;
+                        default = null;
+                        description = "Default IPv4 gateway for static mode.";
+                    };
                 };
-                gateway = mkOption {
-                    description = "Gateway IP";
-                    type = types.singleLineStr;
-                    example = "192.168.0.1";
+                ipv6 = {
+                    enable = mkOption {
+                        type = types.bool;
+                        default = false;
+                        description = "Enable static IPv6 configuration on the WAN interface.";
+                    };
+                    address = mkOption {
+                        type = types.str;
+                        default = "2001:db8::2";
+                        description = "Static IPv6 address in static mode.";
+                    };
+                    prefixLength = mkOption {
+                        type = types.int;
+                        default = 64;
+                        description = "Prefix length for the static IPv6 network.";
+                    };
+                    gateway = mkOption {
+                        type = types.nullOr types.str;
+                        default = null;
+                        description = "Default IPv6 gateway for static mode.";
+                    };
                 };
-                subnet = mkOption {
-                    description = "Subnet specifier";
-                    type = types.singleLineStr;
-                    example = "192.168.0.0/24";
-                };
-                prefixLength = mkOption {
-                    description = "Subnet prefix length";
-                    type = types.int;
-                    example = 24;
+                dnsServers = mkOption {
+                    type = types.listOf types.str;
+                    default = [ ];
+                    description = "DNS servers to use when static addressing is selected.";
                 };
             };
-        });
+
+            pppoe = {
+                logicalInterface = mkOption {
+                    type = types.str;
+                    default = "ppp0";
+                    description = "Name of the PPPoE interface created by pppd.";
+                };
+                user = mkOption {
+                    type = types.str;
+                    default = "";
+                    description = "PPPoE username supplied by the ISP.";
+                };
+                passwordFile = mkOption {
+                    type = types.str;
+                    default = "/etc/nixos/secrets/pppoe-password";
+                    description = "Absolute path to the PPPoE password file.";
+                };
+                service = mkOption {
+                    type = types.nullOr types.str;
+                    default = null;
+                    description = "Optional PPPoE service name.";
+                };
+                ipv6 = mkOption {
+                    type = types.bool;
+                    default = true;
+                    description = "Enable IPv6 negotiation on the PPPoE session.";
+                };
+                mtu = mkOption {
+                    type = types.nullOr types.int;
+                    default = null;
+                    description = "Override MTU for the PPPoE session.";
+                };
+            };
+        };
+    };
 
     DNSRecord = types.submodule {
         target = mkOption {
@@ -261,11 +314,48 @@ let
                     };
                     ipv4 = mkOption {
                         description = "IPv4 configuration";
-                        type = lanIpConfiguration true;
+                        type = types.submodule {
+                            options = {
+                                gateway = mkOption {
+                                    description = "Gateway IP";
+                                    type = types.singleLineStr;
+                                    example = "192.168.0.1";
+                                };
+                                subnet = mkOption {
+                                    description = "Subnet specifier";
+                                    type = types.singleLineStr;
+                                    example = "192.168.0.0/24";
+                                };
+                                prefixLength = mkOption {
+                                    description = "Subnet prefix length";
+                                    type = types.int;
+                                    example = 24;
+                                };
+                            };
+                        };
                     };
                     ipv6 = mkOption {
                         description = "IPv6 configuration";
-                        type = lanIpConfiguration false;
+                        type = types.submodule {
+                            options = {
+                                enable = mkEnableOption "Enable IPv6";
+                                gateway = mkOption {
+                                    description = "Gateway IP";
+                                    type = types.singleLineStr;
+                                    example = "fd00:dead:beef::1";
+                                };
+                                subnet = mkOption {
+                                    description = "Subnet specifier";
+                                    type = types.singleLineStr;
+                                    example = "fd00:dead:beef::0/64";
+                                };
+                                prefixLength = mkOption {
+                                    description = "Subnet prefix length";
+                                    type = types.int;
+                                    example = 64;
+                                };
+                            };
+                        };
                     };
                     bridge = mkOption {
                         description = "Associated bridge";
@@ -345,6 +435,11 @@ let
                 description = "Configuration of LAN networks";
                 type = lanNetworkConfiguration;
             };
+            primaryNetwork = mkOption {
+                description = "Name of primary network for search domain";
+                type = types.nullOr types.str;
+                default = null;
+            };
         };
     };
 
@@ -400,6 +495,7 @@ let
             config_file = mkOption {
                 description = "Path to config file";
                 type = types.path;
+                default = cfg.secrets.paths.dyndns-config;
             };
             period = mkOption {
                 description = "Period to update dyndns";
@@ -415,7 +511,8 @@ let
     };
 
     # Config for [NixRTR/nixos-router](https://github.com/NixRTR/nixos-router) WebUI
-    webUiConfigType = types.submodule {
+    # Disabled for now
+    /*webUiConfigType = types.submodule {
         options = {
             enable = mkEnableOption "Enable WebUI";
             port = mkOption {
@@ -540,6 +637,55 @@ let
                 description = "Schedule nightly VACUUM ANALYZE on metric tables (requires psql on the aggregation Celery worker PATH).";
             };
         };
+    };*/
+
+    # Firewall config options
+    firewallConfigType = types.submodule {
+        allowPing = mkOption {
+            type = types.bool;
+            default = true;
+            description = "Allow ICMP echo requests on the firewall.";
+        };
+        allowedTCPPorts = mkOption {
+            type = types.listOf types.port;
+            default = [
+                80
+                443
+            ];
+            description = "TCP ports open on untrusted interfaces (e.g. WAN). Do not add SSH (22); it is only reachable from trusted LAN interfaces.";
+        };
+        allowedUDPPorts = mkOption {
+            type = types.listOf types.port;
+            default = [ ];
+            description = "UDP ports open on untrusted interfaces (e.g. WAN). Do not add DNS (53) or DHCP (67/68); they are opened only on LAN interfaces by the DNS module.";
+        };
+    };
+
+    # NAT config options
+    natConfigType = types.submodule {
+        enable = mkOption {
+            type = types.bool;
+            default = true;
+            description = "Enable NAT between LAN and WAN.";
+        };
+        externalInterface = mkOption {
+            type = types.nullOr types.str;
+            default = null;
+            description = ''
+                Interface used for outbound NAT. If left null, it is derived
+                from the WAN type (ppp0/pptp0 for PPP variants, otherwise the WAN physical interface).
+            '';
+        };
+        internalInterfaces = mkOption {
+            type = types.listOf types.str;
+            default = [ ];
+            description = "Interfaces treated as internal networks for NAT.";
+        };
+        enableIPv6 = mkOption {
+            type = types.bool;
+            default = true;
+            description = "Enable IPv6 masquerading (if supported).";
+        };
     };
 
     # Router config options
@@ -599,9 +745,92 @@ let
                     };
                 };
             };
-            webui = mkOption {
+            /*webui = mkOption {
                 description = "WebUI configuration";
                 type = webUiConfigType;
+            };*/
+            firewall = mkOption {
+                description = "Firewall configuration";
+                type = firewallConfigType;
+            };
+            nat = mkOption {
+                description = "NAT configuration";
+                type = natConfigType;
+            };
+        };
+    };
+
+    # Secret configuration
+    secretsConfigType = types.submodule {
+        options = {
+            sops = mkOption {
+                description = ''
+                    Automatic sops-nix configuration
+                    Assumes that sops-nix has already been configured globally
+                    Secret entries should be names of sops secrets from secrets.yaml (or any secrets file)
+                '';
+                type = types.submodule {
+                    options = {
+                        enable = mkEnableOption "Enable automatic sops-nix configuration";
+                        pppoe = mkOption {
+                            description = "PPPOE secrets";
+                            type = types.submodule {
+                                options = {
+                                    username = mkOption {
+                                        description = "Secret name for PPPOE username";
+                                        type = types.singleLineStr;
+                                        default = "pppoe-username";
+                                    };
+                                    password = mkOption {
+                                        description = "Secret name for PPPOE password";
+                                        type = types.singleLineStr;
+                                        default = "pppoe-password";
+                                    };
+                                    config = mkOption {
+                                        description = "Name of the PPPOE config file generated";
+                                        type = types.singleLineStr;
+                                        default = "pppoe-peer.conf";
+                                    };
+                                };
+                            };
+                        };
+                        dyndns = mkOption {
+                            description = "Secret name for dyndns configuration";
+                            type = types.singleLineStr;
+                            default = "ddns-updater.conf";
+                        };
+                    };
+                };
+            };
+            paths = mkOption {
+                description = ''
+                    Paths to secrets.
+                    Automatically generated if `secrets.sops.enable == true`
+                '';
+                type = types.submodule (let sops = cfg.secrets.sops; in {
+                    options = {
+                        pppoe-username = mkOption {
+                            description = "Path to pppoe-username secret";
+                            type = types.str;
+                            default = mkIf sops.enable config.sops.secrets.${sops.pppoe.username}.path;
+                        };
+                        pppoe-password = mkOption {
+                            description = "Path to pppoe-password secret";
+                            type = types.str;
+                            default = mkIf sops.enable config.sops.secrets.${sops.pppoe.password}.path;
+                        };
+                        pppoe-config = mkOption {
+                            description = "Path to pppoe-config secret";
+                            type = types.str;
+                            default = mkIf sops.enable config.sops.templates.${sops.pppoe.config}.path;
+                        };
+                        dyndns-config = mkOption {
+                            description = "Path to dyndns-config secret";
+                            type = types.str;
+                            default = mkIf sops.enable config.sops.secrets.${sops.dyndns}.path;
+                        };
+                    };
+                });
             };
         };
     };
@@ -614,6 +843,43 @@ in
                 description = "Router configuration";
                 type = routerConfigType;
             };
+            secrets = mkOption {
+                description = "Secret definitions";
+                type = secretsConfigType;
+            };
         };
     };
+
+    config = mkMerge [
+        (mkIf cfg.secrets.sops.enable (let
+            sopscfg = cfg.secrets.sops;
+        in {
+            sops = mkMerge [
+                (mkIf (cfg.config.wan.type == "pppoe") {
+                    secrets.${sopscfg.pppoe.username} = {
+                        owner = "root";
+                        mode = "0400";
+                    };
+                    secrets.${sopscfg.pppoe.password} = {
+                        owner = "root";
+                        mode = "0400";
+                    };
+                    templates.${sopscfg.pppoe.config} = {
+                        content = ''
+                            user ${config.sops.placeholder.${sopscfg.pppoe.username}}
+                            password ${config.sops.placeholder.${sopscfg.pppoe.password}}
+                        '';
+                        owner = "root";
+                        mode = "0400";
+                    };
+                })
+                (mkIf cfg.config.dynamicDns.enable {
+                    secrets.${sopscfg.dyndns} = {
+                        owner = "root";
+                        mode = "0400";
+                    };
+                })
+            ];
+        }))
+    ];
 }
