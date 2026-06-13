@@ -75,10 +75,10 @@ in
             natExternalInterface =
                 if natCfg.externalInterface != null then
                     natCfg.externalInterface
-                else if wanType == "pppoe" then
+                else if wanConf.type == "pppoe" then
                     pppoeCfg.logicalInterface
                 else
-                    wanInterface;
+                    wanConf.interface;
         in
         mkMerge (
             [
