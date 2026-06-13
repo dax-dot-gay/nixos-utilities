@@ -14,7 +14,7 @@
         enable = true;
         config = {
             domain = "nixos-utilities.local";
-            nameservers = [ "1.1.1.1" "9.9.9.9" ];
+            nameservers = [ "1.1.1.1" "9.9.9.9" "192.168.24.1" ];
             wan = {
                 type = "dhcp";
                 interface = "ens18";
