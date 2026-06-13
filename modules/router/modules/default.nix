@@ -39,7 +39,7 @@ in
         ./dyndns.nix
     ];
 
-    config = {
+    config = mkIf cfg.enable {
         services.resolved.enable = true;
         networking.nameservers = nameservers;
 
