@@ -125,7 +125,7 @@ let
     primaryDomains = mapAttrs (key: value: (extractPrimaryDomain value.records.a_records)) dns;
 
     # Convert DHCP reservations to host records
-    dhcpHostRecords = mapAttrs (key: value: (dhcpReservationsToHostRecords value.reservations)) dhcp;
+    dhcpHostRecords = mapAttrs (key: value: (dhcpReservationsToHostRecords value.reservations primaryDomains.${key})) dhcp;
 
     # Get wildcard domains and their target ips
     dnsWildcards = mapAttrs (

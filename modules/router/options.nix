@@ -251,7 +251,7 @@ let
                     '';
                     type = types.listOf types.singleLineStr;
                     default =
-                        (optional netcfg.ipv4.enable netcfg.ipv4.gateway)
+                        [netcfg.ipv4.gateway]
                         ++ (optional netcfg.ipv6.enable netcfg.ipv6.gateway);
                 };
                 dynamicDomain = mkOption {
@@ -303,7 +303,7 @@ let
         types.submodule (
             { config, ... }:
             let
-                netcfg = cfg.lan.networks.${config._module.args.name};
+                netcfg = cfg.config.lan.networks.${config._module.args.name};
             in
             {
                 options = {
