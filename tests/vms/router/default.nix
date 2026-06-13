@@ -20,7 +20,7 @@
                 interface = "ens18";
             };
             lan = {
-                isolation.enable = true;
+                isolation.enable = false;
                 networks = {
                     main = {
                         ipv4 = {
@@ -96,6 +96,8 @@
     };
     environment.systemPackages = [
         pkgs.neovim
+        pkgs.ghostty.terminfo
+        pkgs.git
     ];
     nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     nix.registry.nixpkgs.flake = inputs.nixpkgs;
