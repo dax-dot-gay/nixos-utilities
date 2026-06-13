@@ -145,14 +145,16 @@ let
     };
 
     DNSRecord = types.submodule {
-        target = mkOption {
-            description = "Record target";
-            type = types.singleLineStr;
-        };
-        comment = mkOption {
-            description = "Record comment";
-            type = types.str;
-            default = "";
+        options = {
+            target = mkOption {
+                description = "Record target";
+                type = types.singleLineStr;
+            };
+            comment = mkOption {
+                description = "Record comment";
+                type = types.str;
+                default = "";
+            };
         };
     };
 
@@ -160,61 +162,63 @@ let
     lanNetworkDNSConfiguration =
         netcfg:
         (types.submodule {
-            enable = mkEnableOption "Enable DNS for this network";
-            forwardUnlisted = mkOption {
-                description = "Forward unlisted DNS records to upstream";
-                type = types.bool;
-                default = true;
-            };
-            records = mkOption {
-                description = "DNS records";
-                type = types.submodule {
-                    options = {
-                        a_records = mkOption {
-                            description = "A Records";
-                            type = types.attrsOf DNSRecord;
-                            default = { };
-                        };
-                        cname_records = mkOption {
-                            description = "CNAME Records";
-                            type = types.attrsOf DNSRecord;
-                            default = { };
+            options = {
+                enable = mkEnableOption "Enable DNS for this network";
+                forwardUnlisted = mkOption {
+                    description = "Forward unlisted DNS records to upstream";
+                    type = types.bool;
+                    default = true;
+                };
+                records = mkOption {
+                    description = "DNS records";
+                    type = types.submodule {
+                        options = {
+                            a_records = mkOption {
+                                description = "A Records";
+                                type = types.attrsOf DNSRecord;
+                                default = { };
+                            };
+                            cname_records = mkOption {
+                                description = "CNAME Records";
+                                type = types.attrsOf DNSRecord;
+                                default = { };
+                            };
                         };
                     };
                 };
-            };
-            whitelist = mkOption {
-                description = "Domains to whitelist";
-                type = types.listOf types.singleLineStr;
-                default = [ ];
-                example = [
-                    "example.com"
-                ];
-            };
-            blocklists = mkOption {
-                description = "DNS Blocklists";
-                type = types.attrsOf (
-                    types.submodule {
-                        options = {
-                            enable = mkEnableOption "Enable this blocklist";
-                            url = mkOption {
-                                description = "Blocklist URL";
-                                type = types.singleLineStr;
+                whitelist = mkOption {
+                    description = "Domains to whitelist";
+                    type = types.listOf types.singleLineStr;
+                    default = [ ];
+                    example = [
+                        "example.com"
+                    ];
+                };
+                blocklists = mkOption {
+                    description = "DNS Blocklists";
+                    type = types.attrsOf (
+                        types.submodule {
+                            options = {
+                                enable = mkEnableOption "Enable this blocklist";
+                                url = mkOption {
+                                    description = "Blocklist URL";
+                                    type = types.singleLineStr;
+                                };
+                                description = mkOption {
+                                    description = "Blocklist description";
+                                    type = types.str;
+                                    default = "";
+                                };
+                                updateInterval = mkOption {
+                                    description = "Blocklist update frequency";
+                                    type = types.singleLineStr;
+                                    default = "24h";
+                                };
                             };
-                            description = mkOption {
-                                description = "Blocklist description";
-                                type = types.str;
-                                default = "";
-                            };
-                            updateInterval = mkOption {
-                                description = "Blocklist update frequency";
-                                type = types.singleLineStr;
-                                default = "24h";
-                            };
-                        };
-                    }
-                );
-                default = { };
+                        }
+                    );
+                    default = { };
+                };
             };
         });
 
@@ -505,175 +509,181 @@ let
 
     # Config for [NixRTR/nixos-router](https://github.com/NixRTR/nixos-router) WebUI
     # Disabled for now
-    /*webUiConfigType = types.submodule {
-        options = {
-            enable = mkEnableOption "Enable WebUI";
-            port = mkOption {
-                type = types.port;
-                default = 8080;
-                description = "Port for nginx (public-facing)";
-            };
+    /*
+      webUiConfigType = types.submodule {
+          options = {
+              enable = mkEnableOption "Enable WebUI";
+              port = mkOption {
+                  type = types.port;
+                  default = 8080;
+                  description = "Port for nginx (public-facing)";
+              };
 
-            backendPort = mkOption {
-                type = types.port;
-                default = 8081;
-                description = "Port for the FastAPI backend (internal)";
-            };
+              backendPort = mkOption {
+                  type = types.port;
+                  default = 8081;
+                  description = "Port for the FastAPI backend (internal)";
+              };
 
-            database = {
-                host = mkOption {
-                    type = types.str;
-                    default = "localhost";
-                    description = "PostgreSQL host";
-                };
+              database = {
+                  host = mkOption {
+                      type = types.str;
+                      default = "localhost";
+                      description = "PostgreSQL host";
+                  };
 
-                port = mkOption {
-                    type = types.port;
-                    default = 5432;
-                    description = "PostgreSQL port";
-                };
+                  port = mkOption {
+                      type = types.port;
+                      default = 5432;
+                      description = "PostgreSQL port";
+                  };
 
-                name = mkOption {
-                    type = types.str;
-                    default = "router_webui";
-                    description = "PostgreSQL database name";
-                };
+                  name = mkOption {
+                      type = types.str;
+                      default = "router_webui";
+                      description = "PostgreSQL database name";
+                  };
 
-                user = mkOption {
-                    type = types.str;
-                    default = "router_webui";
-                    description = "PostgreSQL user";
-                };
-            };
+                  user = mkOption {
+                      type = types.str;
+                      default = "router_webui";
+                      description = "PostgreSQL user";
+                  };
+              };
 
-            collectionInterval = mkOption {
-                type = types.int;
-                default = 2;
-                description = "Data collection interval in seconds";
-            };
+              collectionInterval = mkOption {
+                  type = types.int;
+                  default = 2;
+                  description = "Data collection interval in seconds";
+              };
 
-            jwtSecretFile = mkOption {
-                type = types.nullOr types.path;
-                default = null;
-                description = "Path to JWT secret key file (managed by sops)";
-            };
+              jwtSecretFile = mkOption {
+                  type = types.nullOr types.path;
+                  default = null;
+                  description = "Path to JWT secret key file (managed by sops)";
+              };
 
-            debug = mkOption {
-                type = types.bool;
-                default = false;
-                description = "Enable debug mode (verbose logging, auto-reload, etc.)";
-            };
+              debug = mkOption {
+                  type = types.bool;
+                  default = false;
+                  description = "Enable debug mode (verbose logging, auto-reload, etc.)";
+              };
 
-            aggregationCpuQuota = mkOption {
-                type = types.str;
-                default = "50%";
-                description = "Systemd CPUQuota for the aggregation Celery worker (percentage of one CPU core). Recommended: 4+ cores → 50%, 2–3 cores → 25%, 1 core → 15%. When Postgres is also throttled (postgresqlCpuQuota), aggregation will take longer but both DB and worker are capped so core router functions stay responsive.";
-            };
+              aggregationCpuQuota = mkOption {
+                  type = types.str;
+                  default = "50%";
+                  description = "Systemd CPUQuota for the aggregation Celery worker (percentage of one CPU core). Recommended: 4+ cores → 50%, 2–3 cores → 25%, 1 core → 15%. When Postgres is also throttled (postgresqlCpuQuota), aggregation will take longer but both DB and worker are capped so core router functions stay responsive.";
+              };
 
-            postgresqlCpuQuota = mkOption {
-                type = types.nullOr types.str;
-                default = null;
-                description = "Optional systemd CPUQuota for PostgreSQL (e.g. \"100%\" = one core max). Limits DB CPU during aggregation so core router functions stay responsive. Increase if frontend feels slow and you rely on Redis cache.";
-            };
+              postgresqlCpuQuota = mkOption {
+                  type = types.nullOr types.str;
+                  default = null;
+                  description = "Optional systemd CPUQuota for PostgreSQL (e.g. \"100%\" = one core max). Limits DB CPU during aggregation so core router functions stay responsive. Increase if frontend feels slow and you rely on Redis cache.";
+              };
 
-            metricsRetentionDays = mkOption {
-                type = types.int;
-                default = 30;
-                description = "Delete router time-series metrics (system, interfaces, disk I/O, temperature, services, CAKE, speedtest) older than this many days.";
-            };
+              metricsRetentionDays = mkOption {
+                  type = types.int;
+                  default = 30;
+                  description = "Delete router time-series metrics (system, interfaces, disk I/O, temperature, services, CAKE, speedtest) older than this many days.";
+              };
 
-            bandwidthStatsRetentionDays = mkOption {
-                type = types.int;
-                default = 180;
-                description = "Maximum age in days for client bandwidth and connection stats after tiered aggregation.";
-            };
+              bandwidthStatsRetentionDays = mkOption {
+                  type = types.int;
+                  default = 180;
+                  description = "Maximum age in days for client bandwidth and connection stats after tiered aggregation.";
+              };
 
-            bandwidthAggregateRawAfterDays = mkOption {
-                type = types.int;
-                default = 2;
-                description = "Aggregate raw bandwidth/connection stats to 1m after data is this many days old.";
-            };
+              bandwidthAggregateRawAfterDays = mkOption {
+                  type = types.int;
+                  default = 2;
+                  description = "Aggregate raw bandwidth/connection stats to 1m after data is this many days old.";
+              };
 
-            bandwidthAggregate1mAfterDays = mkOption {
-                type = types.int;
-                default = 7;
-                description = "Aggregate 1m stats to 5m after data is this many days old.";
-            };
+              bandwidthAggregate1mAfterDays = mkOption {
+                  type = types.int;
+                  default = 7;
+                  description = "Aggregate 1m stats to 5m after data is this many days old.";
+              };
 
-            bandwidthAggregate5mAfterDays = mkOption {
-                type = types.int;
-                default = 30;
-                description = "Aggregate 5m stats to 1h after data is this many days old.";
-            };
+              bandwidthAggregate5mAfterDays = mkOption {
+                  type = types.int;
+                  default = 30;
+                  description = "Aggregate 5m stats to 1h after data is this many days old.";
+              };
 
-            bandwidthAggregate1hAfterDays = mkOption {
-                type = types.int;
-                default = 90;
-                description = "Aggregate 1h stats to 1d after data is this many days old.";
-            };
+              bandwidthAggregate1hAfterDays = mkOption {
+                  type = types.int;
+                  default = 90;
+                  description = "Aggregate 1h stats to 1d after data is this many days old.";
+              };
 
-            metricsMaxDatabaseGb = mkOption {
-                type = types.int;
-                default = 0;
-                description = "If greater than 0, after daily retention delete oldest bandwidth/connection rows (below metricsEmergencyMinRetentionDays floor) until database size is under this many GiB. Disabled when 0.";
-            };
+              metricsMaxDatabaseGb = mkOption {
+                  type = types.int;
+                  default = 0;
+                  description = "If greater than 0, after daily retention delete oldest bandwidth/connection rows (below metricsEmergencyMinRetentionDays floor) until database size is under this many GiB. Disabled when 0.";
+              };
 
-            metricsEmergencyMinRetentionDays = mkOption {
-                type = types.int;
-                default = 30;
-                description = "Emergency size trim never removes data newer than this many days (floor).";
-            };
+              metricsEmergencyMinRetentionDays = mkOption {
+                  type = types.int;
+                  default = 30;
+                  description = "Emergency size trim never removes data newer than this many days (floor).";
+              };
 
-            metricsVacuumAnalyzeEnabled = mkOption {
-                type = types.bool;
-                default = true;
-                description = "Schedule nightly VACUUM ANALYZE on metric tables (requires psql on the aggregation Celery worker PATH).";
-            };
-        };
-    };*/
+              metricsVacuumAnalyzeEnabled = mkOption {
+                  type = types.bool;
+                  default = true;
+                  description = "Schedule nightly VACUUM ANALYZE on metric tables (requires psql on the aggregation Celery worker PATH).";
+              };
+          };
+      };
+    */
 
     # Firewall config options
     firewallConfigType = types.submodule {
-        allowPing = mkOption {
-            type = types.bool;
-            default = true;
-            description = "Allow ICMP echo requests on the firewall.";
-        };
-        allowedTCPPorts = mkOption {
-            type = types.listOf types.port;
-            default = [
-                80
-                443
-            ];
-            description = "TCP ports open on untrusted interfaces (e.g. WAN). Do not add SSH (22); it is only reachable from trusted LAN interfaces.";
-        };
-        allowedUDPPorts = mkOption {
-            type = types.listOf types.port;
-            default = [ ];
-            description = "UDP ports open on untrusted interfaces (e.g. WAN). Do not add DNS (53) or DHCP (67/68); they are opened only on LAN interfaces by the DNS module.";
+        options = {
+            allowPing = mkOption {
+                type = types.bool;
+                default = true;
+                description = "Allow ICMP echo requests on the firewall.";
+            };
+            allowedTCPPorts = mkOption {
+                type = types.listOf types.port;
+                default = [
+                    80
+                    443
+                ];
+                description = "TCP ports open on untrusted interfaces (e.g. WAN). Do not add SSH (22); it is only reachable from trusted LAN interfaces.";
+            };
+            allowedUDPPorts = mkOption {
+                type = types.listOf types.port;
+                default = [ ];
+                description = "UDP ports open on untrusted interfaces (e.g. WAN). Do not add DNS (53) or DHCP (67/68); they are opened only on LAN interfaces by the DNS module.";
+            };
         };
     };
 
     # NAT config options
     natConfigType = types.submodule {
-        enable = mkEnableOption "Enable NAT between LAN and WAN.";
-        externalInterface = mkOption {
-            type = types.nullOr types.str;
-            default = null;
-            description = ''
-                Interface used for outbound NAT. If left null, it is derived
-                from the WAN type (ppp0/pptp0 for PPP variants, otherwise the WAN physical interface).
-            '';
-        };
-        internalInterfaces = mkOption {
-            type = types.listOf types.str;
-            default = [ ];
-            description = "Interfaces treated as internal networks for NAT.";
-        };
-        enableIPv6 = mkOption {
-            type = types.bool;
-            default = true;
-            description = "Enable IPv6 masquerading (if supported).";
+        options = {
+            enable = mkEnableOption "Enable NAT between LAN and WAN.";
+            externalInterface = mkOption {
+                type = types.nullOr types.str;
+                default = null;
+                description = ''
+                    Interface used for outbound NAT. If left null, it is derived
+                    from the WAN type (ppp0/pptp0 for PPP variants, otherwise the WAN physical interface).
+                '';
+            };
+            internalInterfaces = mkOption {
+                type = types.listOf types.str;
+                default = [ ];
+                description = "Interfaces treated as internal networks for NAT.";
+            };
+            enableIPv6 = mkOption {
+                type = types.bool;
+                default = true;
+                description = "Enable IPv6 masquerading (if supported).";
+            };
         };
     };
 
@@ -730,10 +740,12 @@ let
                     };
                 };
             };
-            /*webui = mkOption {
-                description = "WebUI configuration";
-                type = webUiConfigType;
-            };*/
+            /*
+              webui = mkOption {
+                  description = "WebUI configuration";
+                  type = webUiConfigType;
+              };
+            */
             firewall = mkOption {
                 description = "Firewall configuration";
                 type = firewallConfigType;
@@ -792,30 +804,35 @@ let
                     Paths to secrets.
                     Automatically generated if `secrets.sops.enable == true`
                 '';
-                type = types.submodule (let sops = cfg.secrets.sops; in {
-                    options = {
-                        pppoe-username = mkOption {
-                            description = "Path to pppoe-username secret";
-                            type = types.str;
-                            default = mkIf sops.enable config.sops.secrets.${sops.pppoe.username}.path;
+                type = types.submodule (
+                    let
+                        sops = cfg.secrets.sops;
+                    in
+                    {
+                        options = {
+                            pppoe-username = mkOption {
+                                description = "Path to pppoe-username secret";
+                                type = types.str;
+                                default = mkIf sops.enable config.sops.secrets.${sops.pppoe.username}.path;
+                            };
+                            pppoe-password = mkOption {
+                                description = "Path to pppoe-password secret";
+                                type = types.str;
+                                default = mkIf sops.enable config.sops.secrets.${sops.pppoe.password}.path;
+                            };
+                            pppoe-config = mkOption {
+                                description = "Path to pppoe-config secret";
+                                type = types.str;
+                                default = mkIf sops.enable config.sops.templates.${sops.pppoe.config}.path;
+                            };
+                            dyndns-config = mkOption {
+                                description = "Path to dyndns-config secret";
+                                type = types.str;
+                                default = mkIf sops.enable config.sops.secrets.${sops.dyndns}.path;
+                            };
                         };
-                        pppoe-password = mkOption {
-                            description = "Path to pppoe-password secret";
-                            type = types.str;
-                            default = mkIf sops.enable config.sops.secrets.${sops.pppoe.password}.path;
-                        };
-                        pppoe-config = mkOption {
-                            description = "Path to pppoe-config secret";
-                            type = types.str;
-                            default = mkIf sops.enable config.sops.templates.${sops.pppoe.config}.path;
-                        };
-                        dyndns-config = mkOption {
-                            description = "Path to dyndns-config secret";
-                            type = types.str;
-                            default = mkIf sops.enable config.sops.secrets.${sops.dyndns}.path;
-                        };
-                    };
-                });
+                    }
+                );
             };
         };
     };
@@ -836,35 +853,38 @@ in
     };
 
     config = mkMerge [
-        (mkIf cfg.secrets.sops.enable (let
-            sopscfg = cfg.secrets.sops;
-        in {
-            sops = mkMerge [
-                (mkIf (cfg.config.wan.type == "pppoe") {
-                    secrets.${sopscfg.pppoe.username} = {
-                        owner = "root";
-                        mode = "0400";
-                    };
-                    secrets.${sopscfg.pppoe.password} = {
-                        owner = "root";
-                        mode = "0400";
-                    };
-                    templates.${sopscfg.pppoe.config} = {
-                        content = ''
-                            user ${config.sops.placeholder.${sopscfg.pppoe.username}}
-                            password ${config.sops.placeholder.${sopscfg.pppoe.password}}
-                        '';
-                        owner = "root";
-                        mode = "0400";
-                    };
-                })
-                (mkIf cfg.config.dynamicDns.enable {
-                    secrets.${sopscfg.dyndns} = {
-                        owner = "root";
-                        mode = "0400";
-                    };
-                })
-            ];
-        }))
+        (mkIf cfg.secrets.sops.enable (
+            let
+                sopscfg = cfg.secrets.sops;
+            in
+            {
+                sops = mkMerge [
+                    (mkIf (cfg.config.wan.type == "pppoe") {
+                        secrets.${sopscfg.pppoe.username} = {
+                            owner = "root";
+                            mode = "0400";
+                        };
+                        secrets.${sopscfg.pppoe.password} = {
+                            owner = "root";
+                            mode = "0400";
+                        };
+                        templates.${sopscfg.pppoe.config} = {
+                            content = ''
+                                user ${config.sops.placeholder.${sopscfg.pppoe.username}}
+                                password ${config.sops.placeholder.${sopscfg.pppoe.password}}
+                            '';
+                            owner = "root";
+                            mode = "0400";
+                        };
+                    })
+                    (mkIf cfg.config.dynamicDns.enable {
+                        secrets.${sopscfg.dyndns} = {
+                            owner = "root";
+                            mode = "0400";
+                        };
+                    })
+                ];
+            }
+        ))
     ];
 }
