@@ -17,7 +17,7 @@
             nameservers = [ "1.1.1.1" "9.9.9.9" ];
             wan = {
                 type = "dhcp";
-                interface = "eno1";
+                interface = "ens18";
             };
             lan = {
                 isolation.enable = true;
@@ -32,7 +32,7 @@
                         bridge = {
                             name = "br0";
                             interfaces = [
-                                "eno2"
+                                "ens19"
                             ];
                         };
                         dhcp = {
@@ -52,8 +52,8 @@
             };
             nat = {
                 enable = true;
-                externalInterface = "eno1";
-                internalInterfaces = [ "eno2" ];
+                externalInterface = "ens18";
+                internalInterfaces = [ "ens19" ];
             };
         };
         secrets = {
