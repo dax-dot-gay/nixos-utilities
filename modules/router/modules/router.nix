@@ -7,6 +7,7 @@
 with lib;
 let
     cfg = config.flake.nixos-utilities.systems.router;
+    routerConfig = cfg.config;
     mkPortPairs =
         forward:
         let
@@ -39,9 +40,8 @@ in
 {
     config = mkIf cfg.enable (
         let
-            conf = cfg.config;
-            wanConf = conf.wan;
-            lanConf = conf.lan;
+            wanConf = routerConfig.wan;
+            lanConf = routerConfig.lan;
             bridges = map (net: {
                 name = net.bridge.name;
                 interfaces = net.bridge.interfaces;
@@ -56,8 +56,8 @@ in
                 };
             }) (attrValues lanConf.networks);
             bridgeNames = map (b: b.name) bridges;
-            firewallCfg = cfg.firewall;
-            natCfg = cfg.nat;
+            firewallCfg = routerConfig.firewall;
+            natCfg = routerConfig.nat;
             lanIsolation = lanConf.isolation.enable;
             isolationExceptions = map (exception: {
                 source = exception.address;
@@ -70,7 +70,7 @@ in
                 externalPort = pf.externalPort;
                 destination = pf.destinationIp;
                 destinationPort = pf.internalPort;
-            }) cfg.portForwarding;
+            }) routerConfig.portForwarding;
             natForwardEntries = concatMap mkPortPairs portForwards;
             natExternalInterface =
                 if natCfg.externalInterface != null then
@@ -511,23 +511,26 @@ in
                         };
                     };
                 })
+                {
+                    networking.interfaces = mapAttrs' (key: network: {
+                        name = network.bridge.name;
+                        value = {
+                            ipv4.addresses = [
+                                {
+                                    address = network.ipv4.gateway;
+                                    prefixLength = network.ipv4.prefixLength;
+                                }
+                            ];
+                            ipv6.addresses = optional network.ipv6.enable [
+                                {
+                                    address = network.ipv6.gateway;
+                                    prefixLength = network.ipv6.prefixLength;
+                                }
+                            ];
+                        };
+                    }) lanConf.networks;
+                }
             ]
-            ++ (map (network: {
-                networking.interfaces.${network.bridge.name} = {
-                    ipv4.addresses = [
-                        {
-                            address = network.ipv4.gateway;
-                            prefixLength = network.ipv4.prefixLength;
-                        }
-                    ];
-                    ipv6.addresses = optional network.ipv6.enable [
-                        {
-                            address = network.ipv6.gateway;
-                            prefixLength = network.ipv6.prefixLength;
-                        }
-                    ];
-                };
-            }) (attrValues lanConf.networks))
         )
     );
 }

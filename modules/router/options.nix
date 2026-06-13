@@ -85,11 +85,7 @@ let
                     };
                 };
                 ipv6 = {
-                    enable = mkOption {
-                        type = types.bool;
-                        default = false;
-                        description = "Enable static IPv6 configuration on the WAN interface.";
-                    };
+                    enable = mkEnableOption "Enable static IPv6 configuration on the WAN interface.";
                     address = mkOption {
                         type = types.str;
                         default = "2001:db8::2";
@@ -397,10 +393,7 @@ let
                 description = "Network isolation";
                 type = types.submodule {
                     options = {
-                        enable = mkOption {
-                            description = "Enable isolation (defaults to TRUE)";
-                            type = types.bool;
-                        };
+                        enable = mkEnableOption "Enable NAT isolation";
                         exceptions = mkOption {
                             description = "Isolation exceptions";
                             type = types.listOf (
@@ -663,11 +656,7 @@ let
 
     # NAT config options
     natConfigType = types.submodule {
-        enable = mkOption {
-            type = types.bool;
-            default = true;
-            description = "Enable NAT between LAN and WAN.";
-        };
+        enable = mkEnableOption "Enable NAT between LAN and WAN.";
         externalInterface = mkOption {
             type = types.nullOr types.str;
             default = null;
@@ -726,11 +715,7 @@ let
                 description = "Global DNS configuration";
                 type = types.submodule {
                     options = {
-                        enable = mkOption {
-                            description = "Enable global DNS (enabled by default)";
-                            type = types.bool;
-                            default = true;
-                        };
+                        enable = mkEnableOption "Enable global DNS";
                         upstreamServers = mkOption {
                             description = "Upstream DNS servers";
                             type = types.listOf types.singleLineStr;
