@@ -5,7 +5,7 @@
 }:
 with lib;
 let
-    cfg = config.flake.nixos-utilities.systems.router;
+    cfg = config.nixos-utilities.systems.router;
     dyndns = cfg.config.dynamicDns;
 in
 {

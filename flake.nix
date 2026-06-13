@@ -8,6 +8,10 @@
             url = "github:Mic92/sops-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        comin = {
+            url = "github:nlewo/comin";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs =
@@ -62,10 +66,17 @@
                 default = lib.modules.importApply ./modules {
                     inherit self;
                     inputs = inputs;
+                    system = system;
                 };
                 router = lib.modules.importApply ./modules/router {
                     inherit self;
                     inputs = inputs;
+                    system = system;
+                };
+                autoUpgrade = lib.modules.importApply ./modules/autoUpgrade {
+                    inherit self;
+                    inputs = inputs;
+                    system = system;
                 };
             };
             nixosConfigurations = {

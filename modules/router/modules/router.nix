@@ -6,7 +6,7 @@
 }:
 with lib;
 let
-    cfg = config.flake.nixos-utilities.systems.router;
+    cfg = config.nixos-utilities.systems.router;
     routerConfig = cfg.config;
 
     expandPortSpec =

@@ -5,7 +5,7 @@
 }:
 with lib;
 let
-    cfg = config.flake.nixos-utilities.systems.router;
+    cfg = config.nixos-utilities.systems.router;
 
     # Configuration of CAKE service
     wanCakeConfigType = types.submodule {
@@ -839,7 +839,7 @@ let
 in
 {
     options = {
-        flake.nixos-utilities.systems.router = {
+        nixos-utilities.systems.router = {
             enable = mkEnableOption "Enable router subsystem";
             config = mkOption {
                 description = "Router configuration";

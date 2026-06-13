@@ -10,7 +10,7 @@
         ./hardware-configuration.nix
     ];
 
-    flake.nixos-utilities.systems.router = {
+    nixos-utilities.systems.router = {
         enable = true;
         config = {
             domain = "nixos-utilities.local";
