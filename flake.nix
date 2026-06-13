@@ -11,7 +11,7 @@
     };
 
     outputs =
-        { self, ... }@inputs:
+        { self, nixpkgs, ... }@inputs:
         let
             inherit (inputs.nixpkgs) lib;
 
@@ -37,6 +37,11 @@
                         };
                     }
                 );
+            system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
         in
         {
             /*
@@ -61,6 +66,16 @@
                 router = lib.modules.importApply ./modules/router {
                     inherit self;
                     inputs = inputs;
+                };
+            };
+            nixosConfigurations = {
+                vms-router = nixpkgs.lib.nixosSystem {
+                    inherit system;
+                    specialArgs = {inherit inputs;};
+                    modules = [
+                        self.nixosModules.router
+                        ./tests/vms/router.nix
+                    ];
                 };
             };
         };
