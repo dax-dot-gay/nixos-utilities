@@ -80,7 +80,7 @@ in
                 else
                     wanConf.interface;
         in
-        mkMerge (
+        mkMerge 
             [
                 {
                     # Set global required features
@@ -531,6 +531,6 @@ in
                     }) lanConf.networks;
                 }
             ]
-        )
+        
     );
 }

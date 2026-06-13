@@ -33,7 +33,7 @@ let
     bridgeNames = mapAttrs (key: value: value.name) bridges;
 
     # Helper function to convert lease time string to seconds
-    leaseToSeconds =
+    /*leaseToSeconds =
         lease:
         let
             numeric = builtins.match "^[0-9]+$" lease;
@@ -62,7 +62,7 @@ let
             in
             num * multiplier unit
         else
-            86400;
+            86400;*/
 
     # Helper function to extract domain from A records (for DHCP option 15)
     extractDomain =

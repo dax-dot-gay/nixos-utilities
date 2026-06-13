@@ -56,6 +56,14 @@
             dns = {
                 enable = true;
             };
+            portForwarding = [
+                {
+                    protocol = "both";
+                    externalPort = 2022;
+                    internalPort = 22;
+                    destinationIp = "192.168.24.128";
+                }
+            ];
         };
         secrets = {
             sops.enable = false;
