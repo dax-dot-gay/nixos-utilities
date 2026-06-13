@@ -55,6 +55,9 @@
                 externalInterface = "ens18";
                 internalInterfaces = [ "ens19" ];
             };
+            dns = {
+                enable = true;
+            };
         };
         secrets = {
             sops.enable = false;
