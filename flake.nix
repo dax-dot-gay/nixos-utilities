@@ -85,7 +85,8 @@
                     specialArgs = {inherit inputs system;};
                     modules = [
                         "${nixpkgs}/nixos/modules/virtualisation/proxmox-image.nix"
-                        self.nixosModules.router
+                        self.nixosModules.default
+                        inputs.comin.nixosModules.comin
                         inputs.sops-nix.nixosModules.sops
                         ./tests/vms/router
                     ];
