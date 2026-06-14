@@ -48,4 +48,23 @@
             fi
         done
     '';
+
+    # Send a desktop notification when a reboot is required
+    notifier-reboot = pkgs.writers.writeBashBin "notifier-reboot" ''
+        # bash
+        NOTIFY_TITLE=$1
+        NOTIFY_URGENCY=$2
+        NOTIFY_MESSAGE=$3
+        NOTIFY_ACTION=$4
+
+        for id in $(loginctl list-sessions -j | ${pkgs.jq}/bin/jq -r '.[] | .session') ; do
+            if [[ $(loginctl show-session "$id" --property=Type) =~ (wayland|x11) ]] ; then
+                USER=$(loginctl show-session "$id" --property=Name --value)
+                RESPONSE=$(sudo -u "$USER" DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/"$(id -u "$USER")"/bus ${pkgs.libnotify}/bin/notify-send --urgency="$NOTIFY_URGENCY" --app-name="$NOTIFY_TITLE" --action=reboot="$NOTIFY_ACTION" "$NOTIFY_MESSAGE" "The system is out of date and needs to be rebooted!")
+                if [ "$RESPONSE" == "reboot" ]; then
+                    shutdown -r now
+                fi
+            fi
+        done
+    '';
 }

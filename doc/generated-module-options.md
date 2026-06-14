@@ -657,6 +657,134 @@ one of “low”, “normal”, “critical”
 
 
 
+## nixos-utilities\.services\.autoUpgrade\.desktop\.rebootConfirmation\.enable
+
+
+
+Whether to enable the standard auto-reboot confirmation dialog\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
+*Example:*
+
+```nix
+true
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.rebootConfirmation\.action
+
+
+
+Name of confirmation action
+
+
+
+*Type:*
+(optionally newline-terminated) single-line string
+
+
+
+*Default:*
+
+```nix
+"Reboot Now"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.rebootConfirmation\.summary
+
+
+
+Notifcation summary
+
+
+
+*Type:*
+string
+
+
+
+*Default:*
+
+```nix
+"Reboot required: "
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.rebootConfirmation\.title
+
+
+
+Title of generated notification
+
+
+
+*Type:*
+(optionally newline-terminated) single-line string
+
+
+
+*Default:*
+
+```nix
+"Updater"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.rebootConfirmation\.urgency
+
+
+
+Notification urgency
+
+
+
+*Type:*
+one of “low”, “normal”, “critical”
+
+
+
+*Default:*
+
+```nix
+"critical"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
 ## nixos-utilities\.services\.autoUpgrade\.gpgKeys
 
 
@@ -1108,6 +1236,178 @@ null or (optionally newline-terminated) single-line string
 
 ```nix
 null
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.reboot\.enable
+
+
+
+Whether to enable detection and automation of required reboots\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
+*Example:*
+
+```nix
+true
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.reboot\.mode
+
+
+
+Shutdown automation mode
+
+**Allowed Modes:**
+
+ - ` auto `: Shuts down immediately upon receiving event
+ - ` desktop `: Sends a desktop notification prompting for reboot\. ` desktop.rebootConfirmation ` must be enabled\.
+ - ` command `: Delegates shutdown to a command
+
+
+
+*Type:*
+one of “auto”, “desktop”, “command”
+
+
+
+*Default:*
+
+```nix
+"auto"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.reboot\.rebootCommand
+
+
+
+Command to run when ` reboot.mode ` == ` command `
+
+
+
+*Type:*
+string
+
+
+
+*Default:*
+
+```nix
+"shutdown -r now"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.reboot\.rebootWindow
+
+
+
+Define a lower and upper time value (in HH:MM format) which
+constitute a time window during which reboots are allowed after an upgrade\.
+This option only has an effect when ` allowReboot ` is enabled\.
+The default value of ` null ` means that reboots are allowed at any time\.
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+*Example:*
+
+```nix
+{
+  lower = "01:00";
+  upper = "05:00";
+}
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.reboot\.rebootWindow\.lower
+
+
+
+Lower limit of the reboot window
+
+
+
+*Type:*
+string matching the pattern \[\[:digit:]]{2}:\[\[:digit:]]{2}
+
+
+
+*Example:*
+
+```nix
+"01:00"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.reboot\.rebootWindow\.upper
+
+
+
+Upper limit of the reboot window
+
+
+
+*Type:*
+string matching the pattern \[\[:digit:]]{2}:\[\[:digit:]]{2}
+
+
+
+*Example:*
+
+```nix
+"05:00"
 ```
 
 *Declared by:*
@@ -2290,8 +2590,6 @@ true
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.blocklists
 
-
-
 DNS Blocklists
 
 
@@ -2513,6 +2811,8 @@ Record target
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records\.cname_records
+
+
 
 CNAME Records
 

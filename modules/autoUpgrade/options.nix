@@ -32,7 +32,11 @@ in
                 };
                 urgency = mkOption {
                     description = "Notification urgency";
-                    type = types.enum ["low" "normal" "critical"];
+                    type = types.enum [
+                        "low"
+                        "normal"
+                        "critical"
+                    ];
                     default = "critical";
                 };
             };
@@ -55,7 +59,38 @@ in
                 };
                 urgency = mkOption {
                     description = "Notification urgency";
-                    type = types.enum ["low" "normal" "critical"];
+                    type = types.enum [
+                        "low"
+                        "normal"
+                        "critical"
+                    ];
+                    default = "critical";
+                };
+            };
+            rebootConfirmation = {
+                enable = mkEnableOption "the standard auto-reboot confirmation dialog";
+                title = mkOption {
+                    description = "Title of generated notification";
+                    type = types.singleLineStr;
+                    default = "Updater";
+                };
+                summary = mkOption {
+                    description = "Notifcation summary";
+                    type = types.str;
+                    default = "Reboot required: ";
+                };
+                action = mkOption {
+                    description = "Name of confirmation action";
+                    type = types.singleLineStr;
+                    default = "Reboot Now";
+                };
+                urgency = mkOption {
+                    description = "Notification urgency";
+                    type = types.enum [
+                        "low"
+                        "normal"
+                        "critical"
+                    ];
                     default = "critical";
                 };
             };
@@ -174,7 +209,7 @@ in
                                     Should be a list of executable paths, to be run in order
                                 '';
                                 type = types.listOf types.path;
-                                default = [];
+                                default = [ ];
                             };
                         }) events)
                         // {
@@ -312,6 +347,63 @@ in
                     };
                 }
             );
+        };
+
+        reboot = {
+            enable = mkEnableOption "detection and automation of required reboots";
+            mode = mkOption {
+                description = ''
+                    Shutdown automation mode
+
+                    **Allowed Modes:**
+                     - `auto`: Shuts down immediately upon receiving event
+                     - `desktop`: Sends a desktop notification prompting for reboot. `desktop.rebootConfirmation` must be enabled.
+                     - `command`: Delegates shutdown to a command
+                '';
+                type = types.enum [
+                    "auto"
+                    "desktop"
+                    "command"
+                ];
+                default = "auto";
+            };
+            rebootWindow = mkOption {
+                description = ''
+                    Define a lower and upper time value (in HH:MM format) which
+                    constitute a time window during which reboots are allowed after an upgrade.
+                    This option only has an effect when {option}`allowReboot` is enabled.
+                    The default value of `null` means that reboots are allowed at any time.
+                '';
+                default = null;
+                example = {
+                    lower = "01:00";
+                    upper = "05:00";
+                };
+                type = types.nullOr (
+                    types.submodule {
+                        options = {
+                            lower = mkOption {
+                                description = "Lower limit of the reboot window";
+                                type = types.strMatching "[[:digit:]]{2}:[[:digit:]]{2}";
+                                example = "01:00";
+                            };
+
+                            upper = mkOption {
+                                description = "Upper limit of the reboot window";
+                                type = types.strMatching "[[:digit:]]{2}:[[:digit:]]{2}";
+                                example = "05:00";
+                            };
+                        };
+                    }
+                );
+            };
+            rebootCommand = mkOption {
+                description = ''
+                    Command to run when `reboot.mode` == `command`
+                '';
+                type = types.str;
+                default = "shutdown -r now";
+            };
         };
     };
 }
