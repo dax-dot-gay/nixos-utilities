@@ -38,7 +38,57 @@ comin debug mode (WARN: shows secrets)
 
 **Default:** `false`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.enable`](autoUpgrade/options.nix#L40)
+## [`options.nixos-utilities.services.autoUpgrade.comin.repositorySubdir`](autoUpgrade/options.nix#L35)
+
+Subdirectory in the repository, containing a flake.nix file.
+
+**Type:** `types.str`
+
+**Default:** `"."`
+
+## [`options.nixos-utilities.services.autoUpgrade.comin.submodules`](autoUpgrade/options.nix#L40)
+
+Whether to fetch and include Git submodules when cloning the repository. When enabled, this adds ?submodules=1 to the flake URL.
+
+**Type:** `types.bool`
+
+**Default:** `false`
+
+## [`options.nixos-utilities.services.autoUpgrade.comin.retention.deployment_boot_entry_capacity`](autoUpgrade/options.nix#L46)
+
+
+Number of boot entries to keep. Controls how many successful
+deployments generating boot entries (boot or switch operations)
+with unique storepaths are retained.
+
+
+**Type:** `int`
+
+**Default:** `3`
+
+## [`options.nixos-utilities.services.autoUpgrade.comin.retention.deployment_successful_capacity`](autoUpgrade/options.nix#L55)
+
+
+Number of successful deployments to keep. Includes all deployments
+with status=done, regardless of operation type.
+
+
+**Type:** `int`
+
+**Default:** `3`
+
+## [`options.nixos-utilities.services.autoUpgrade.comin.retention.deployment_any_capacity`](autoUpgrade/options.nix#L63)
+
+
+Total number of deployments to keep. Includes all deployments
+regardless of status (including failed deployments).
+
+
+**Type:** `int`
+
+**Default:** `5`
+
+## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.enable`](autoUpgrade/options.nix#L77)
 
 Whether to enable 
 the build confirmer (`comin.buildConfirmer`)
@@ -51,7 +101,7 @@ Specifically, sets `comin.buildConfirmer.mode` to "without" if not enabled
 
 **Example:** `true`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.autoconfirm_duration`](autoUpgrade/options.nix#L44)
+## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.autoconfirm_duration`](autoUpgrade/options.nix#L81)
 
 
 Duration for the autoconfirmer, or `null` to disable auto-confirmation
@@ -62,7 +112,7 @@ Implies `comin.buildConfirmer.mode` based on this setting
 
 **Default:** `null`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.confirmation_command`](autoUpgrade/options.nix#L52)
+## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.confirmation_command`](autoUpgrade/options.nix#L89)
 
 Command to run when a build confirmation is waiting
 
@@ -74,7 +124,7 @@ Command to run when a build confirmation is waiting
 if cfg.enableDesktop then "${scripts.notifier-build}/bin/notifier-build" else null
 ```
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.enable`](autoUpgrade/options.nix#L59)
+## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.enable`](autoUpgrade/options.nix#L96)
 
 Whether to enable 
 the deploy confirmer (`comin.deployConfirmer`)
@@ -87,7 +137,7 @@ Specifically, sets `comin.deployConfirmer.mode` to "without" if not enabled
 
 **Example:** `true`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.autoconfirm_duration`](autoUpgrade/options.nix#L63)
+## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.autoconfirm_duration`](autoUpgrade/options.nix#L100)
 
 
 Duration for the autoconfirmer, or `null` to disable auto-confirmation
@@ -98,7 +148,7 @@ Implies `comin.deployConfirmer.mode` based on this setting
 
 **Default:** `null`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.confirmation_command`](autoUpgrade/options.nix#L71)
+## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.confirmation_command`](autoUpgrade/options.nix#L108)
 
 Command to run when a deploy confirmation is waiting
 
@@ -110,7 +160,7 @@ Command to run when a deploy confirmation is waiting
 if cfg.enableDesktop then "${scripts.notifier-deploy}/bin/notifier-deploy" else null
 ```
 
-## [`options.nixos-utilities.services.autoUpgrade.gpgKeys`](autoUpgrade/options.nix#L121)
+## [`options.nixos-utilities.services.autoUpgrade.gpgKeys`](autoUpgrade/options.nix#L166)
 
 A list of GPG public key file paths. Each of this file should contains an armored GPG key.
 
@@ -118,7 +168,7 @@ A list of GPG public key file paths. Each of this file should contains an armore
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.services.autoUpgrade.identification.hostname`](autoUpgrade/options.nix#L128)
+## [`options.nixos-utilities.services.autoUpgrade.identification.hostname`](autoUpgrade/options.nix#L173)
 
 
 The name of the configuration to evaluate and deploy. This value is used by comin to evaluate the flake output nixosConfigurations.“<hostname>” or darwinConfigurations.“<hostname>”. 
@@ -129,7 +179,7 @@ Defaults to networking.hostName - you MUST set either this option or networking.
 
 **Default:** `config.networking.hostName`
 
-## [`options.nixos-utilities.services.autoUpgrade.identification.machineId`](autoUpgrade/options.nix#L136)
+## [`options.nixos-utilities.services.autoUpgrade.identification.machineId`](autoUpgrade/options.nix#L181)
 
 
 The expected machine-id of the machine configured by comin. If not null, the configuration is only deployed when this specified machine-id is equal to the actual machine-id. 
@@ -140,6 +190,90 @@ Note it is only used by comin at evaluation.
 **Type:** `types.nullOr types.singleLineStr`
 
 **Default:** `null`
+
+## [`options.nixos-utilities.services.autoUpgrade.remotes`](autoUpgrade/options.nix#L192)
+
+
+Git remotes to pull from
+Maps directly to `comin.remotes`
+
+
+**Type:**
+
+```nix
+types.listOf (
+    types.submodule {
+        options = {
+            name = mkOption {
+                description = "The name of the remote.";
+                type = types.str;
+            };
+            url = mkOption {
+                description = "The URL of the repository.";
+                type = types.str;
+            };
+            auth = {
+                access_token_path = mkOption {
+                    description = "The path of the auth file.";
+                    type = types.str;
+                    default = "";
+                };
+                username = mkOption {
+                    description = "The username used to authenticate to the Git remote repository. Note that any non empty username is valid on GitLab and GitHub.";
+                    type = types.str;
+                    default = "comin";
+                };
+            };
+            branches = {
+                main = {
+                    name = mkOption {
+                        description = "The name of the main branch.";
+                        type = types.str;
+                        default = "main";
+                    };
+                    operation = mkOption {
+                        description = "The switch-to-configuration operation to do on this branch.";
+                        type = types.enum [
+                            "switch"
+                            "test"
+                            "boot"
+                        ];
+                        default = "switch";
+                    };
+                };
+                testing = {
+                    name = mkOption {
+                        description = "The name of the testing branch.";
+                        type = types.str;
+                        default = "testing-${cfg.identification.hostname}";
+                    };
+                    operation = mkOption {
+                        description = "The switch-to-configuration operation to do on this branch.";
+                        type = types.enum [
+                            "switch"
+                            "test"
+                            "boot"
+                        ];
+                        default = "test";
+                    };
+                };
+            };
+            poller = {
+                period = mkOption {
+                    description = "The poller period in seconds.";
+                    type = types.int;
+                    default = 60;
+                };
+                timeout = mkOption {
+                    description = "Git fetch timeout in seconds.";
+                    type = types.int;
+                    default = 300;
+                };
+            };
+        };
+    }
+)
+```
 
 ## [`options.nixos-utilities.systems.router.enable`](router/options.nix#L57)
 
