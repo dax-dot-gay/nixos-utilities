@@ -142,7 +142,7 @@ in
                     '';
                     path = [ "/run/current-system/sw" ];
                 };
-        systemd.services."autoUpgrade-reboot-handler" = mkIf cfg.reboot.enabled {
+        systemd.services."autoUpgrade-reboot-handler" = mkIf cfg.reboot.enable {
             wantedBy = [ "default.target" ];
             wants = [ "multi-user.target" ];
             serviceConfig = {
