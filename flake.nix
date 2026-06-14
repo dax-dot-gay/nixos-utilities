@@ -87,7 +87,7 @@
                     ];
                 };
             };
-            packages.x86_64-linux = {
+            packages."${system}" = {
                 vms-router-vma = self.nixosConfigurations.vms-router.config.system.build.VMA;
                 generate-module-options = optionsDocFor."${system}".optionsDocCommonMarkGenerator;
             };

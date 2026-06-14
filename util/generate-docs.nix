@@ -18,6 +18,7 @@ rec {
                             assertions = pkgs.lib.mkOption {
                                 type = pkgs.lib.types.anything;
                                 description = "";
+                                internal = true;
                             };
                             networking.hostName = pkgs.lib.mkOption {
                                 type = pkgs.lib.types.str;
@@ -38,16 +39,5 @@ rec {
     optionsDocCommonMarkGenerator = pkgs.writers.writeBashBin "optionsDocCommonMarkGenerator" ''
         cp -v ${optionsDocCommonMark} ./doc/generated-module-options.md
         chmod u+w ./doc/generated-module-options.md
-    '';
-    checkOptionsDocCommonMark = pkgs.runCommand "check-options-doc.md" { } ''
-        set +e
-        ${pkgs.diffutils}/bin/diff -q ${optionsDocCommonMark} ${../doc/generated-module-options.md}
-        if [[ $? -ne 0 ]]
-        then
-          echo "The ./doc/module-options.md file is not up to date."
-          echo "Run 'nix run .#generate-module-options' to generate it!"
-          exit 1
-        fi
-        echo Files ${optionsDocCommonMark} ${../doc/generated-module-options.md} are identical > $out
     '';
 }

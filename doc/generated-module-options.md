@@ -1,10 +1,3 @@
-## assertions
-
-*Type:*
-anything
-
-
-
 ## nixos-utilities\.services\.autoUpgrade\.enable
 
 
@@ -97,8 +90,6 @@ null or package
 
 
 ## nixos-utilities\.services\.autoUpgrade\.comin\.debug
-
-
 
 Enable comin debug mode
 
@@ -2472,6 +2463,8 @@ submodule
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6\.enable
 
+
+
 Whether to enable Enable IPv6\.
 
 
@@ -2501,8 +2494,6 @@ true
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6\.gateway
-
-
 
 Gateway IP
 
