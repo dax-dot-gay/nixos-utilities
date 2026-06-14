@@ -17,7 +17,7 @@ in
 
         enableDesktop = mkEnableOption ''
             features relevant to a GUI environment:
-            - Confirmation will show a desktop notification by default, if enabled
+            - Confirmation will show a desktop notification by default, if enabled (replaces comin desktop integration)
         '';
 
         # Comin internals
@@ -131,10 +131,10 @@ in
                                     **Comin Event Hook:**
 
                                     Commands to run on comin.events.${eventName} (see [nlewo/comin](https://github.com/nlewo/comin/blob/main/pkg/protobuf/services.proto))
-                                    Should be an attrset of `{hook_name: "<path to executable>"}`
+                                    Should be a list of executable paths, to be run in order
                                 '';
-                                type = types.attrsOf types.path;
-                                default = { };
+                                type = types.listOf types.path;
+                                default = [];
                             };
                         }) events)
                         // {
