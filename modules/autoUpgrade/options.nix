@@ -1,24 +1,65 @@
 {
     config,
     lib,
-    inputs,
-    pkgs,
-    system,
     ...
 }:
 with lib;
 let
     cfg = config.nixos-utilities.services.autoUpgrade;
-    scripts = (import ./scripts.nix) { inherit pkgs lib; };
 in
 {
     options.nixos-utilities.services.autoUpgrade = {
         enable = mkEnableOption "automatic system updates backed by comin";
 
-        enableDesktop = mkEnableOption ''
-            features relevant to a GUI environment:
-            - Confirmation will show a desktop notification by default, if enabled (replaces comin desktop integration)
-        '';
+        desktop = {
+            enable = mkEnableOption "features relating to use in a graphical environment";
+            buildConfirmation = {
+                enable = mkEnableOption "the standard build confirmation dialog";
+                title = mkOption {
+                    description = "Title of generated notification";
+                    type = types.singleLineStr;
+                    default = "Updater";
+                };
+                summary = mkOption {
+                    description = "Notifcation summary";
+                    type = types.str;
+                    default = "Build confirmation pending: ";
+                };
+                action = mkOption {
+                    description = "Name of confirmation action";
+                    type = types.singleLineStr;
+                    default = "Build";
+                };
+                urgency = mkOption {
+                    description = "Notification urgency";
+                    type = types.enum ["low" "normal" "critical"];
+                    default = "critical";
+                };
+            };
+            deployConfirmation = {
+                enable = mkEnableOption "the standard deploy confirmation dialog";
+                title = mkOption {
+                    description = "Title of generated notification";
+                    type = types.singleLineStr;
+                    default = "Updater";
+                };
+                summary = mkOption {
+                    description = "Notifcation summary";
+                    type = types.str;
+                    default = "Deploy confirmation pending: ";
+                };
+                action = mkOption {
+                    description = "Name of confirmation action";
+                    type = types.singleLineStr;
+                    default = "Deploy";
+                };
+                urgency = mkOption {
+                    description = "Notification urgency";
+                    type = types.enum ["low" "normal" "critical"];
+                    default = "critical";
+                };
+            };
+        };
 
         # Comin internals
         comin = {
@@ -94,7 +135,7 @@ in
                 confirmation_command = mkOption {
                     description = "Command to run when a build confirmation is waiting";
                     type = types.nullOr types.path;
-                    default = if cfg.enableDesktop then "${scripts.notifier-build}/bin/notifier-build" else null;
+                    default = null;
                 };
             };
             deploy = {
@@ -113,7 +154,7 @@ in
                 confirmation_command = mkOption {
                     description = "Command to run when a deploy confirmation is waiting";
                     type = types.nullOr types.path;
-                    default = if cfg.enableDesktop then "${scripts.notifier-deploy}/bin/notifier-deploy" else null;
+                    default = null;
                 };
             };
         };

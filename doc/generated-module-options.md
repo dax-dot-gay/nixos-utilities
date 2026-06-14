@@ -30,41 +30,6 @@ true
 
 
 
-## nixos-utilities\.services\.autoUpgrade\.enableDesktop
-
-
-
-Whether to enable features relevant to a GUI environment:
-
- - Confirmation will show a desktop notification by default, if enabled (replaces comin desktop integration)
-   \.
-
-
-
-*Type:*
-boolean
-
-
-
-*Default:*
-
-```nix
-false
-```
-
-
-
-*Example:*
-
-```nix
-true
-```
-
-*Declared by:*
- - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
-
-
-
 ## nixos-utilities\.services\.autoUpgrade\.comin\.package
 
 
@@ -397,6 +362,294 @@ null or absolute path
 
 ```nix
 null
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.enable
+
+
+
+Whether to enable features relating to use in a graphical environment\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
+*Example:*
+
+```nix
+true
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.buildConfirmation\.enable
+
+
+
+Whether to enable the standard build confirmation dialog\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
+*Example:*
+
+```nix
+true
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.buildConfirmation\.action
+
+
+
+Name of confirmation action
+
+
+
+*Type:*
+(optionally newline-terminated) single-line string
+
+
+
+*Default:*
+
+```nix
+"Build"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.buildConfirmation\.summary
+
+
+
+Notifcation summary
+
+
+
+*Type:*
+string
+
+
+
+*Default:*
+
+```nix
+"Build confirmation pending: "
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.buildConfirmation\.title
+
+
+
+Title of generated notification
+
+
+
+*Type:*
+(optionally newline-terminated) single-line string
+
+
+
+*Default:*
+
+```nix
+"Updater"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.buildConfirmation\.urgency
+
+
+
+Notification urgency
+
+
+
+*Type:*
+one of “low”, “normal”, “critical”
+
+
+
+*Default:*
+
+```nix
+"critical"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.deployConfirmation\.enable
+
+
+
+Whether to enable the standard deploy confirmation dialog\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
+*Example:*
+
+```nix
+true
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.deployConfirmation\.action
+
+
+
+Name of confirmation action
+
+
+
+*Type:*
+(optionally newline-terminated) single-line string
+
+
+
+*Default:*
+
+```nix
+"Deploy"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.deployConfirmation\.summary
+
+
+
+Notifcation summary
+
+
+
+*Type:*
+string
+
+
+
+*Default:*
+
+```nix
+"Deploy confirmation pending: "
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.deployConfirmation\.title
+
+
+
+Title of generated notification
+
+
+
+*Type:*
+(optionally newline-terminated) single-line string
+
+
+
+*Default:*
+
+```nix
+"Updater"
+```
+
+*Declared by:*
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
+
+
+
+## nixos-utilities\.services\.autoUpgrade\.desktop\.deployConfirmation\.urgency
+
+
+
+Notification urgency
+
+
+
+*Type:*
+one of “low”, “normal”, “critical”
+
+
+
+*Default:*
+
+```nix
+"critical"
 ```
 
 *Declared by:*
@@ -2261,8 +2514,6 @@ Record target
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records\.cname_records
 
-
-
 CNAME Records
 
 
@@ -2494,6 +2745,8 @@ true
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6\.gateway
+
+
 
 Gateway IP
 
