@@ -61,11 +61,7 @@ in
                 };
         systemd.services."autoUpgrade-hook-hooks-comin" =
             mkIf
-                (any (
-                    map (execs: (length execs) > 0) (
-                        map (hookName: cfg.hooks."on${hookName}") (attrNames cfg.hooks._cominEventTypes)
-                    )
-                ))
+                (any (execs: (length execs) > 0) (map (hookName: cfg.hooks."on${hookName}") (attrNames cfg.hooks._cominEventTypes)))
                 {
                     wantedBy = [ "default.target" ];
                     wants = [ "multi-user.target" ];

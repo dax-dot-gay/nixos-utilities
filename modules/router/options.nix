@@ -384,7 +384,7 @@ in
                                                     options = {
                                                         a_records = mkOption {
                                                             description = "A Records";
-                                                            type = types.attrsOf types.submodule {
+                                                            type = types.attrsOf (types.submodule {
                                                                 options = {
                                                                     target = mkOption {
                                                                         description = "Record target";
@@ -396,12 +396,12 @@ in
                                                                         default = "";
                                                                     };
                                                                 };
-                                                            };
+                                                            });
                                                             default = { };
                                                         };
                                                         cname_records = mkOption {
                                                             description = "CNAME Records";
-                                                            type = types.attrsOf types.submodule {
+                                                            type = types.attrsOf (types.submodule {
                                                                 options = {
                                                                     target = mkOption {
                                                                         description = "Record target";
@@ -413,7 +413,7 @@ in
                                                                         default = "";
                                                                     };
                                                                 };
-                                                            };
+                                                            });
                                                             default = { };
                                                         };
                                                     };
