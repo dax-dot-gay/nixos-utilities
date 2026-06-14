@@ -13,10 +13,10 @@ let
 in
 {
     options.nixos-utilities.services.autoUpgrade = {
-        enable = mkEnableOption "Automatic system updates backed by comin";
+        enable = mkEnableOption "automatic system updates backed by comin";
 
         enableDesktop = mkEnableOption ''
-            Enable features relevant to a GUI environment:
+            features relevant to a GUI environment:
             - Confirmation will show a desktop notification by default, if enabled
         '';
 
@@ -28,7 +28,7 @@ in
                 defaultText = "pkgs.comin or inputs.comin.packages.system.default or null";
             };
             debug = mkOption {
-                description = "Enable Comin debug mode (WARN: shows secrets)";
+                description = "comin debug mode (WARN: shows secrets)";
                 type = types.bool;
                 default = false;
             };
@@ -38,7 +38,7 @@ in
         confirmation = {
             build = {
                 enable = mkEnableOption ''
-                    Enable the build confirmer (`comin.buildConfirmer`)
+                    the build confirmer (`comin.buildConfirmer`)
                     Specifically, sets `comin.buildConfirmer.mode` to "without" if not enabled
                 '';
                 autoconfirm_duration = mkOption {
@@ -57,7 +57,7 @@ in
             };
             deploy = {
                 enable = mkEnableOption ''
-                    Enable the deploy confirmer (`comin.deployConfirmer`)
+                    the deploy confirmer (`comin.deployConfirmer`)
                     Specifically, sets `comin.deployConfirmer.mode` to "without" if not enabled
                 '';
                 autoconfirm_duration = mkOption {
@@ -101,7 +101,7 @@ in
                 });
             in
             ({
-                enable = mkEnableOption "Enable running commands as hooks based on different events and upgrade stages";
+                enable = mkEnableOption "running commands as hooks based on different events and upgrade stages";
             } // mkCominHooks {
                 EvalStarted = "evalStartedType";
                 EvalFinished = "evalFinishedType";
