@@ -1,9 +1,9 @@
-{ pkgs, nix-options-doc, ... }:
+{ pkgs, ... }:
 
 {
     packages = [
         pkgs.git
-        nix-options-doc.packages.x86_64-linux.default
+        pkgs.gnused
     ];
     languages.python = {
         enable = true;
@@ -18,8 +18,10 @@
         generate-docs.exec = '' # bash
             cd $(git rev-parse --show-toplevel)
             mkdir -p doc
-            nix-options-doc --path ./modules --out doc/generated-options.md --strip-prefix
-            ${pkgs.gnused}/bin/sed -i 's/`](/`](..\/modules\//g' doc/generated-options.md
+            nix run ".#generate-module-options"
+            rm -rf result
+            sed -i 's/ - \[\/nix\/store\/[^\/]*\/modules/ - [modules/g' doc/generated-module-options.md
+            sed -i 's/\](file:\/\/\/nix\/store\/[^\/]*\/modules/\]\(..\/modules/g' doc/generated-module-options.md
         '';
     };
 }

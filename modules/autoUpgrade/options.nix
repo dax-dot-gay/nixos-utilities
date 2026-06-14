@@ -31,9 +31,8 @@ in
                 description = ''
                     Enable comin debug mode
 
-                    ::: {.warning}
+                    **Warning:**
                     This setting will display secrets!
-                    :::
                 '';
                 type = types.bool;
                 default = false;

@@ -33,7 +33,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -68,7 +68,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -92,7 +92,7 @@ null or package
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -102,7 +102,8 @@ null or package
 
 Enable comin debug mode
 
-**Warning:** This setting will display secrets!
+**Warning:**
+This setting will display secrets!
 
 
 
@@ -118,7 +119,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -142,7 +143,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -167,7 +168,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -193,7 +194,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -218,7 +219,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -242,7 +243,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -276,7 +277,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -301,7 +302,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -325,7 +326,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -359,7 +360,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -384,7 +385,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -408,7 +409,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -432,7 +433,7 @@ list of (optionally newline-terminated) single-line string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -464,7 +465,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -491,7 +492,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -518,7 +519,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -545,7 +546,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -572,7 +573,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -599,7 +600,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -626,7 +627,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -653,7 +654,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -680,7 +681,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -707,7 +708,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -734,7 +735,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -761,7 +762,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -788,7 +789,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -815,7 +816,7 @@ list of absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -840,7 +841,7 @@ Defaults to networking\.hostName - you MUST set either this option or networking
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -866,7 +867,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -883,7 +884,7 @@ Maps directly to ` comin.remotes `
 list of (submodule)
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -907,7 +908,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -931,7 +932,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -955,7 +956,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -979,7 +980,7 @@ one of “switch”, “test”, “boot”
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1003,7 +1004,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1027,7 +1028,7 @@ one of “switch”, “test”, “boot”
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1043,7 +1044,7 @@ The name of the remote\.
 string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1067,7 +1068,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1091,7 +1092,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1107,7 +1108,7 @@ The URL of the repository\.
 string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+ - [modules/autoUpgrade/options\.nix](../modules/autoUpgrade/options.nix)
 
 
 
@@ -1139,7 +1140,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1171,7 +1172,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1208,7 +1209,7 @@ list of (optionally newline-terminated) single-line string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1232,7 +1233,7 @@ DNS search domain
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1264,7 +1265,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1288,7 +1289,7 @@ absolute path
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1312,7 +1313,7 @@ attribute set of string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1336,7 +1337,7 @@ Period to update dyndns
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1368,7 +1369,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1392,7 +1393,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1419,7 +1420,7 @@ list of 16 bit unsigned integer; between 0 and 65535 (both inclusive)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1443,7 +1444,49 @@ list of 16 bit unsigned integer; between 0 and 65535 (both inclusive)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.lan
+
+
+
+LAN configuration, including arbitrary subnets and subnet isolation
+
+
+
+*Type:*
+submodule
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.lan\.isolation
+
+
+
+Configuration of isolation between networks
+
+
+
+*Type:*
+submodule
+
+
+
+*Default:*
+
+```nix
+{
+  enable = true;
+}
+```
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1475,7 +1518,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1499,7 +1542,7 @@ list of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1515,7 +1558,7 @@ IP address to allow through isolation
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1539,7 +1582,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1555,7 +1598,7 @@ Destination network name
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1571,7 +1614,7 @@ Source network name
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1587,7 +1630,7 @@ Configuration of LAN networks
 attribute set of (submodule)
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1603,7 +1646,7 @@ Associated bridge
 submodule
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1638,7 +1681,7 @@ list of (optionally newline-terminated) single-line string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1662,7 +1705,23 @@ Bridge name
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dhcp
+
+
+
+DHCP configuration for this network
+
+
+
+*Type:*
+submodule
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1694,7 +1753,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1719,7 +1778,7 @@ list of (optionally newline-terminated) single-line string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1757,7 +1816,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1781,7 +1840,7 @@ DHCP end address
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1813,7 +1872,7 @@ DHCP lease time
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1837,7 +1896,7 @@ list of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1861,7 +1920,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1877,7 +1936,7 @@ Reservation hostname
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1893,7 +1952,7 @@ Reservation hardware address
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1909,7 +1968,7 @@ Reservation IP address
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1933,7 +1992,23 @@ DHCP start address
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns
+
+
+
+DNS configuration for this network
+
+
+
+*Type:*
+submodule
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1965,7 +2040,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -1989,7 +2064,7 @@ attribute set of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2021,7 +2096,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2045,7 +2120,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2069,7 +2144,7 @@ Blocklist update frequency
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2085,7 +2160,7 @@ Blocklist URL
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2109,7 +2184,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2125,7 +2200,7 @@ DNS records
 submodule
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2149,7 +2224,7 @@ attribute set of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2173,7 +2248,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2189,7 +2264,7 @@ Record target
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2213,7 +2288,7 @@ attribute set of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2237,7 +2312,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2253,7 +2328,7 @@ Record target
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2287,7 +2362,7 @@ list of (optionally newline-terminated) single-line string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2303,7 +2378,7 @@ IPv4 configuration
 submodule
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2327,7 +2402,7 @@ Gateway IP
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2351,7 +2426,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2375,7 +2450,7 @@ Subnet specifier
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2391,13 +2466,11 @@ IPv6 configuration
 submodule
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6\.enable
-
-
 
 Whether to enable Enable IPv6\.
 
@@ -2423,7 +2496,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2447,7 +2520,7 @@ Gateway IP
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2471,7 +2544,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2495,11 +2568,13 @@ Subnet specifier
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.name
+
+
 
 Network name (should generally be left as the default)
 
@@ -2517,7 +2592,7 @@ Network name (should generally be left as the default)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2541,7 +2616,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2576,7 +2651,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2608,7 +2683,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2632,7 +2707,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2657,7 +2732,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2681,7 +2756,7 @@ list of string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2705,7 +2780,7 @@ list of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2721,7 +2796,7 @@ IP to route to internally
 (optionally newline-terminated) single-line string
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2737,7 +2812,7 @@ External port (or range) to forward from
 16 bit unsigned integer; between 0 and 65535 (both inclusive) or (submodule)
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2761,7 +2836,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2785,7 +2860,49 @@ one of “both”, “tcp”, “udp”
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.wan
+
+
+
+WAN interface \& behavior config
+
+
+
+*Type:*
+submodule
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.wan\.cake
+
+
+
+CAKE configuration
+
+
+
+*Type:*
+submodule
+
+
+
+*Default:*
+
+```nix
+{
+  enable = false;
+}
+```
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2817,7 +2934,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2846,7 +2963,7 @@ one of “auto”, “conservative”, “moderate”, “aggressive”
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2878,7 +2995,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2910,7 +3027,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2934,7 +3051,23 @@ WAN interface
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.wan\.pppoe
+
+
+
+Configuration for PPPOE addressing on the WAN interface, if ` wan.type ` == ` pppoe `
+
+
+
+*Type:*
+submodule
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2958,7 +3091,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -2982,7 +3115,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3006,7 +3139,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3030,7 +3163,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3054,7 +3187,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3078,7 +3211,23 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
+
+
+
+## nixos-utilities\.systems\.router\.config\.wan\.static
+
+
+
+Configuration for static addressing on the WAN interface, if ` wan.type ` == ` static `
+
+
+
+*Type:*
+submodule
+
+*Declared by:*
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3102,7 +3251,7 @@ list of string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3126,7 +3275,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3150,7 +3299,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3174,7 +3323,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3206,7 +3355,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3230,7 +3379,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3254,7 +3403,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3278,7 +3427,7 @@ signed integer
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3302,7 +3451,7 @@ one of “dhcp”, “pppoe”, “static”
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3326,7 +3475,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3350,7 +3499,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3374,7 +3523,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3398,7 +3547,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3430,7 +3579,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3454,7 +3603,7 @@ Secret name for dyndns configuration
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3478,7 +3627,7 @@ Name of the PPPOE config file generated
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3502,7 +3651,7 @@ Secret name for PPPOE password
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
 
@@ -3526,6 +3675,6 @@ Secret name for PPPOE username
 ```
 
 *Declared by:*
- - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+ - [modules/router/options\.nix](../modules/router/options.nix)
 
 
