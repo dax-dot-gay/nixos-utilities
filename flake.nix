@@ -21,8 +21,6 @@
 
             supportedSystems = [
                 "x86_64-linux"
-                "aarch64-linux"
-                "aarch64-darwin"
             ];
 
             forEachSupportedSystem =
@@ -42,10 +40,7 @@
                     }
                 );
             system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
+            optionsDocFor = forEachSupportedSystem ({ pkgs, ... }: import ./util/generate-docs.nix pkgs);
         in
         {
             /*
@@ -79,19 +74,22 @@
                     system = system;
                 };
             };
-            nixosConfigurations = {
-                vms-router = nixpkgs.lib.nixosSystem {
+            nixosConfigurations = forEachSupportedSystem ({system, pkgs, ...}: {
+                vms-router = pkgs.lib.nixosSystem {
                     inherit system;
-                    specialArgs = {inherit inputs system;};
+                    specialArgs = { inherit inputs system; };
                     modules = [
-                        "${nixpkgs}/nixos/modules/virtualisation/proxmox-image.nix"
+                        "${pkgs}/nixos/modules/virtualisation/proxmox-image.nix"
                         self.nixosModules.default
                         inputs.comin.nixosModules.comin
                         inputs.sops-nix.nixosModules.sops
                         ./tests/vms/router
                     ];
                 };
-            };
-            packages.x86_64-linux.vms-router-vma = self.nixosConfigurations.vms-router.config.system.build.VMA;
+            });
+            packages = forEachSupportedSystem ({system, ...}: {
+                vms-router-vma = self.nixosConfigurations.vms-router.config.system.build.VMA;
+                generate-module-options = optionsDocFor."${system}".optionsDocCommonMarkGenerator;
+            });
         };
 }
