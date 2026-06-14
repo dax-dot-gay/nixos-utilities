@@ -4,8 +4,12 @@ rec {
         let
             eval = pkgs.lib.evalModules {
                 modules = [
-                    (import ../modules/autoUpgrade/options.nix)
-                    (import ../modules/router/options.nix)
+                    {
+                        imports = [
+                            ../modules/autoUpgrade/options.nix
+                            ../modules/router/options.nix
+                        ];
+                    }
                     {
                         options = {
                             _module.args = pkgs.lib.mkOption {

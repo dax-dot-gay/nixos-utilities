@@ -32,6 +32,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.enableDesktop
@@ -64,6 +67,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.comin\.package
@@ -84,6 +90,9 @@ null or package
 ```nix
 "pkgs.comin or inputs.comin.packages.system.default or null"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -108,6 +117,9 @@ boolean
 false
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.comin\.repositorySubdir
@@ -128,6 +140,9 @@ string
 ```nix
 "."
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -150,6 +165,9 @@ signed integer
 ```nix
 5
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -174,6 +192,9 @@ signed integer
 3
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.comin\.retention\.deployment_successful_capacity
@@ -196,6 +217,9 @@ signed integer
 3
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.comin\.submodules
@@ -216,6 +240,9 @@ boolean
 ```nix
 false
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -248,6 +275,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.confirmation\.build\.autoconfirm_duration
@@ -270,6 +300,9 @@ null or (unsigned integer, meaning >=0)
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.confirmation\.build\.confirmation_command
@@ -290,6 +323,9 @@ null or absolute path
 ```nix
 null
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -322,6 +358,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.confirmation\.deploy\.autoconfirm_duration
@@ -344,6 +383,9 @@ null or (unsigned integer, meaning >=0)
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.confirmation\.deploy\.confirmation_command
@@ -365,6 +407,9 @@ null or absolute path
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.gpgKeys
@@ -385,6 +430,9 @@ list of (optionally newline-terminated) single-line string
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -415,6 +463,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onBuildFinished
@@ -438,6 +489,9 @@ list of absolute path
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -463,6 +517,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onConfirmationCancelled
@@ -486,6 +543,9 @@ list of absolute path
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -511,6 +571,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onConfirmationSubmitted
@@ -534,6 +597,9 @@ list of absolute path
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -559,6 +625,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onDeploymentStarted
@@ -582,6 +651,9 @@ list of absolute path
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -607,6 +679,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onEvalStarted
@@ -630,6 +705,9 @@ list of absolute path
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -655,6 +733,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onRebootRequired
@@ -678,6 +759,9 @@ list of absolute path
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -703,6 +787,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.hooks\.onSuspend
@@ -727,6 +814,9 @@ list of absolute path
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.identification\.hostname
@@ -748,6 +838,9 @@ Defaults to networking\.hostName - you MUST set either this option or networking
 ```nix
 "the-machine-hostname"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -772,6 +865,9 @@ null or (optionally newline-terminated) single-line string
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes
@@ -785,6 +881,9 @@ Maps directly to ` comin.remotes `
 
 *Type:*
 list of (submodule)
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -807,6 +906,9 @@ string
 ""
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes\.\*\.auth\.username
@@ -827,6 +929,9 @@ string
 ```nix
 "comin"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -849,6 +954,9 @@ string
 "main"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes\.\*\.branches\.main\.operation
@@ -869,6 +977,9 @@ one of “switch”, “test”, “boot”
 ```nix
 "switch"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -891,6 +1002,9 @@ string
 "testing-the-machine-hostname"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes\.\*\.branches\.testing\.operation
@@ -912,6 +1026,9 @@ one of “switch”, “test”, “boot”
 "test"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes\.\*\.name
@@ -924,6 +1041,9 @@ The name of the remote\.
 
 *Type:*
 string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -946,6 +1066,9 @@ signed integer
 60
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes\.\*\.poller\.timeout
@@ -967,6 +1090,9 @@ signed integer
 300
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
+
 
 
 ## nixos-utilities\.services\.autoUpgrade\.remotes\.\*\.url
@@ -979,6 +1105,9 @@ The URL of the repository\.
 
 *Type:*
 string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/autoUpgrade/options.nix)
 
 
 
@@ -1009,6 +1138,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.dns\.enable
@@ -1037,6 +1169,9 @@ false
 ```nix
 true
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1072,6 +1207,9 @@ list of (optionally newline-terminated) single-line string
 ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.domain
@@ -1092,6 +1230,9 @@ DNS search domain
 ```nix
 "example.com"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1122,6 +1263,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.dynamicDns\.config_file
@@ -1142,6 +1286,9 @@ absolute path
 ```nix
 "config.nixos-utilities.systems.router.secrets.paths.dyndns-config"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1164,6 +1311,9 @@ attribute set of string
 { }
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.dynamicDns\.period
@@ -1184,6 +1334,9 @@ Period to update dyndns
 ```nix
 "5m"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1214,6 +1367,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.firewall\.allowPing
@@ -1234,6 +1390,9 @@ boolean
 ```nix
 true
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1259,6 +1418,9 @@ list of 16 bit unsigned integer; between 0 and 65535 (both inclusive)
 ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.firewall\.allowedUDPPorts
@@ -1279,6 +1441,9 @@ list of 16 bit unsigned integer; between 0 and 65535 (both inclusive)
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1309,6 +1474,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.isolation\.exceptions
@@ -1330,6 +1498,9 @@ list of (submodule)
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.isolation\.exceptions\.\*\.address
@@ -1342,6 +1513,9 @@ IP address to allow through isolation
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1364,6 +1538,9 @@ string
 "Generic exception"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.isolation\.exceptions\.\*\.destination
@@ -1376,6 +1553,9 @@ Destination network name
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1390,6 +1570,9 @@ Source network name
 *Type:*
 (optionally newline-terminated) single-line string
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks
@@ -1403,6 +1586,9 @@ Configuration of LAN networks
 *Type:*
 attribute set of (submodule)
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.bridge
@@ -1415,6 +1601,9 @@ Associated bridge
 
 *Type:*
 submodule
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1448,6 +1637,9 @@ list of (optionally newline-terminated) single-line string
 ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.bridge\.name
@@ -1468,6 +1660,9 @@ Bridge name
 ```nix
 "br0"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1498,6 +1693,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dhcp\.dnsServers
@@ -1519,6 +1717,9 @@ list of (optionally newline-terminated) single-line string
 ```nix
 "[ netcfg.ipv4.gateway ] ++ (optional netcfg.ipv6.enable netcfg.ipv6.gateway)"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1555,6 +1756,9 @@ null
 "dhcp.lan"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dhcp\.end
@@ -1575,6 +1779,9 @@ DHCP end address
 ```nix
 "192.168.0.200"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1605,6 +1812,9 @@ DHCP lease time
 "1h"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dhcp\.reservations
@@ -1625,6 +1835,9 @@ list of (submodule)
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1647,6 +1860,9 @@ string
 ""
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dhcp\.reservations\.\*\.hostname
@@ -1659,6 +1875,9 @@ Reservation hostname
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1673,6 +1892,9 @@ Reservation hardware address
 *Type:*
 (optionally newline-terminated) single-line string
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dhcp\.reservations\.\*\.ipAddress
@@ -1685,6 +1907,9 @@ Reservation IP address
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1706,6 +1931,9 @@ DHCP start address
 ```nix
 "192.168.0.100"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1736,6 +1964,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.blocklists
@@ -1756,6 +1987,9 @@ attribute set of (submodule)
 ```nix
 { }
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1786,6 +2020,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.blocklists\.\<name>\.description
@@ -1806,6 +2043,9 @@ string
 ```nix
 ""
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1828,6 +2068,9 @@ Blocklist update frequency
 "24h"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.blocklists\.\<name>\.url
@@ -1840,6 +2083,9 @@ Blocklist URL
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1862,6 +2108,9 @@ boolean
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records
@@ -1874,6 +2123,9 @@ DNS records
 
 *Type:*
 submodule
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1896,6 +2148,9 @@ attribute set of (submodule)
 { }
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records\.a_records\.\<name>\.comment
@@ -1917,6 +2172,9 @@ string
 ""
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records\.a_records\.\<name>\.target
@@ -1929,6 +2187,9 @@ Record target
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -1951,6 +2212,9 @@ attribute set of (submodule)
 { }
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records\.cname_records\.\<name>\.comment
@@ -1972,6 +2236,9 @@ string
 ""
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.dns\.records\.cname_records\.\<name>\.target
@@ -1984,6 +2251,9 @@ Record target
 
 *Type:*
 (optionally newline-terminated) single-line string
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2016,6 +2286,9 @@ list of (optionally newline-terminated) single-line string
 ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv4
@@ -2028,6 +2301,9 @@ IPv4 configuration
 
 *Type:*
 submodule
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2050,6 +2326,9 @@ Gateway IP
 "192.168.0.1"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv4\.prefixLength
@@ -2070,6 +2349,9 @@ signed integer
 ```nix
 24
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2092,6 +2374,9 @@ Subnet specifier
 "192.168.0.0/24"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6
@@ -2104,6 +2389,9 @@ IPv6 configuration
 
 *Type:*
 submodule
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2134,6 +2422,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6\.gateway
@@ -2154,6 +2445,9 @@ Gateway IP
 ```nix
 "fd00:dead:beef::1"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2176,6 +2470,9 @@ signed integer
 64
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.ipv6\.subnet
@@ -2197,6 +2494,9 @@ Subnet specifier
 "fd00:dead:beef::0/64"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.lan\.networks\.\<name>\.name
@@ -2215,6 +2515,9 @@ Network name (should generally be left as the default)
 ```nix
 "‹name›"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2236,6 +2539,9 @@ null or string
 ```nix
 null
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2269,6 +2575,9 @@ null
 ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.nat\.enable
@@ -2298,6 +2607,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.nat\.enableIPv6
@@ -2318,6 +2630,9 @@ boolean
 ```nix
 true
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2341,6 +2656,9 @@ null or string
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.nat\.internalInterfaces
@@ -2361,6 +2679,9 @@ list of string
 ```nix
 [ ]
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2383,6 +2704,9 @@ list of (submodule)
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.portForwarding\.\*\.destinationIp
@@ -2396,6 +2720,9 @@ IP to route to internally
 *Type:*
 (optionally newline-terminated) single-line string
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.portForwarding\.\*\.externalPort
@@ -2408,6 +2735,9 @@ External port (or range) to forward from
 
 *Type:*
 16 bit unsigned integer; between 0 and 65535 (both inclusive) or (submodule)
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2430,6 +2760,9 @@ null or 16 bit unsigned integer; between 0 and 65535 (both inclusive) or (submod
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.portForwarding\.\*\.protocol
@@ -2450,6 +2783,9 @@ one of “both”, “tcp”, “udp”
 ```nix
 "both"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2480,6 +2816,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.cake\.aggressiveness
@@ -2505,6 +2844,9 @@ one of “auto”, “conservative”, “moderate”, “aggressive”
 ```nix
 "auto"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2535,6 +2877,9 @@ null
 "100Mbit"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.cake\.uploadBandwidth
@@ -2564,6 +2909,9 @@ null
 "100Mbit"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.interface
@@ -2584,6 +2932,9 @@ WAN interface
 ```nix
 "eno1"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2606,6 +2957,9 @@ boolean
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.pppoe\.logicalInterface
@@ -2626,6 +2980,9 @@ string
 ```nix
 "ppp0"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2648,6 +3005,9 @@ null or signed integer
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.pppoe\.passwordFile
@@ -2668,6 +3028,9 @@ string
 ```nix
 "/etc/nixos/secrets/pppoe-password"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2690,6 +3053,9 @@ null or string
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.pppoe\.user
@@ -2710,6 +3076,9 @@ string
 ```nix
 ""
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2732,6 +3101,9 @@ list of string
 [ ]
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.static\.ipv4\.address
@@ -2752,6 +3124,9 @@ string
 ```nix
 "203.0.113.2"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2774,6 +3149,9 @@ null or string
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.static\.ipv4\.prefixLength
@@ -2794,6 +3172,9 @@ signed integer
 ```nix
 24
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2824,6 +3205,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.static\.ipv6\.address
@@ -2844,6 +3228,9 @@ string
 ```nix
 "2001:db8::2"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2866,6 +3253,9 @@ null or string
 null
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.config\.wan\.static\.ipv6\.prefixLength
@@ -2886,6 +3276,9 @@ signed integer
 ```nix
 64
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2908,6 +3301,9 @@ one of “dhcp”, “pppoe”, “static”
 "dhcp"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.secrets\.paths\.dyndns-config
@@ -2928,6 +3324,9 @@ string
 ```nix
 "mkIf cfg.secrets.sops.enable config.sops.secrets.ddns-updater.conf.path"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -2950,6 +3349,9 @@ string
 "mkIf cfg.secrets.sops.enable config.sops.templates.pppoe-peer.conf.path"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.secrets\.paths\.pppoe-password
@@ -2971,6 +3373,9 @@ string
 "mkIf cfg.secrets.sops.enable config.sops.secrets.pppoe-password.path"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.secrets\.paths\.pppoe-username
@@ -2991,6 +3396,9 @@ string
 ```nix
 "mkIf cfg.secrets.sops.enable config.sops.secrets.pppoe-username.path"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -3021,6 +3429,9 @@ false
 true
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.secrets\.sops\.dyndns
@@ -3041,6 +3452,9 @@ Secret name for dyndns configuration
 ```nix
 "ddns-updater.conf"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
 
@@ -3063,6 +3477,9 @@ Name of the PPPOE config file generated
 "pppoe-peer.conf"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.secrets\.sops\.pppoe\.password
@@ -3084,6 +3501,9 @@ Secret name for PPPOE password
 "pppoe-password"
 ```
 
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
+
 
 
 ## nixos-utilities\.systems\.router\.secrets\.sops\.pppoe\.username
@@ -3104,5 +3524,8 @@ Secret name for PPPOE username
 ```nix
 "pppoe-username"
 ```
+
+*Declared by:*
+ - [/nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options\.nix](file:///nix/store/azd50hvz26xjbpn37jjjl9cg04m2nwch-source/modules/router/options.nix)
 
 
