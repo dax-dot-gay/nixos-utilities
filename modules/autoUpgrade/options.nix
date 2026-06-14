@@ -28,7 +28,13 @@ in
                 defaultText = "pkgs.comin or inputs.comin.packages.system.default or null";
             };
             debug = mkOption {
-                description = "comin debug mode (WARN: shows secrets)";
+                description = ''
+                    Enable comin debug mode
+
+                    ::: {.warning}
+                    This setting will display secrets!
+                    :::
+                '';
                 type = types.bool;
                 default = false;
             };

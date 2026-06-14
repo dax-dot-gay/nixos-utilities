@@ -32,13 +32,18 @@ Comin package to use
 
 ## [`nixos-utilities.services.autoUpgrade.comin.debug`](../modules/autoUpgrade/options.nix#L30)
 
-comin debug mode (WARN: shows secrets)
+
+Enable comin debug mode
+
+> [!WARNING]  
+> This setting will display secrets!
+
 
 **Type:** `types.bool`
 
 **Default:** `false`
 
-## [`nixos-utilities.services.autoUpgrade.comin.repositorySubdir`](../modules/autoUpgrade/options.nix#L35)
+## [`nixos-utilities.services.autoUpgrade.comin.repositorySubdir`](../modules/autoUpgrade/options.nix#L41)
 
 Subdirectory in the repository, containing a flake.nix file.
 
@@ -46,7 +51,7 @@ Subdirectory in the repository, containing a flake.nix file.
 
 **Default:** `"."`
 
-## [`nixos-utilities.services.autoUpgrade.comin.submodules`](../modules/autoUpgrade/options.nix#L40)
+## [`nixos-utilities.services.autoUpgrade.comin.submodules`](../modules/autoUpgrade/options.nix#L46)
 
 Whether to fetch and include Git submodules when cloning the repository. When enabled, this adds ?submodules=1 to the flake URL.
 
@@ -54,7 +59,7 @@ Whether to fetch and include Git submodules when cloning the repository. When en
 
 **Default:** `false`
 
-## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_boot_entry_capacity`](../modules/autoUpgrade/options.nix#L46)
+## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_boot_entry_capacity`](../modules/autoUpgrade/options.nix#L52)
 
 
 Number of boot entries to keep. Controls how many successful
@@ -66,7 +71,7 @@ with unique storepaths are retained.
 
 **Default:** `3`
 
-## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_successful_capacity`](../modules/autoUpgrade/options.nix#L55)
+## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_successful_capacity`](../modules/autoUpgrade/options.nix#L61)
 
 
 Number of successful deployments to keep. Includes all deployments
@@ -77,7 +82,7 @@ with status=done, regardless of operation type.
 
 **Default:** `3`
 
-## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_any_capacity`](../modules/autoUpgrade/options.nix#L63)
+## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_any_capacity`](../modules/autoUpgrade/options.nix#L69)
 
 
 Total number of deployments to keep. Includes all deployments
@@ -88,7 +93,7 @@ regardless of status (including failed deployments).
 
 **Default:** `5`
 
-## [`nixos-utilities.services.autoUpgrade.confirmation.build.enable`](../modules/autoUpgrade/options.nix#L77)
+## [`nixos-utilities.services.autoUpgrade.confirmation.build.enable`](../modules/autoUpgrade/options.nix#L83)
 
 Whether to enable 
 the build confirmer (`comin.buildConfirmer`)
@@ -101,7 +106,7 @@ Specifically, sets `comin.buildConfirmer.mode` to "without" if not enabled
 
 **Example:** `true`
 
-## [`nixos-utilities.services.autoUpgrade.confirmation.build.autoconfirm_duration`](../modules/autoUpgrade/options.nix#L81)
+## [`nixos-utilities.services.autoUpgrade.confirmation.build.autoconfirm_duration`](../modules/autoUpgrade/options.nix#L87)
 
 
 Duration for the autoconfirmer, or `null` to disable auto-confirmation
@@ -112,7 +117,7 @@ Implies `comin.buildConfirmer.mode` based on this setting
 
 **Default:** `null`
 
-## [`nixos-utilities.services.autoUpgrade.confirmation.build.confirmation_command`](../modules/autoUpgrade/options.nix#L89)
+## [`nixos-utilities.services.autoUpgrade.confirmation.build.confirmation_command`](../modules/autoUpgrade/options.nix#L95)
 
 Command to run when a build confirmation is waiting
 
@@ -124,7 +129,7 @@ Command to run when a build confirmation is waiting
 if cfg.enableDesktop then "${scripts.notifier-build}/bin/notifier-build" else null
 ```
 
-## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.enable`](../modules/autoUpgrade/options.nix#L96)
+## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.enable`](../modules/autoUpgrade/options.nix#L102)
 
 Whether to enable 
 the deploy confirmer (`comin.deployConfirmer`)
@@ -137,7 +142,7 @@ Specifically, sets `comin.deployConfirmer.mode` to "without" if not enabled
 
 **Example:** `true`
 
-## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.autoconfirm_duration`](../modules/autoUpgrade/options.nix#L100)
+## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.autoconfirm_duration`](../modules/autoUpgrade/options.nix#L106)
 
 
 Duration for the autoconfirmer, or `null` to disable auto-confirmation
@@ -148,7 +153,7 @@ Implies `comin.deployConfirmer.mode` based on this setting
 
 **Default:** `null`
 
-## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.confirmation_command`](../modules/autoUpgrade/options.nix#L108)
+## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.confirmation_command`](../modules/autoUpgrade/options.nix#L114)
 
 Command to run when a deploy confirmation is waiting
 
@@ -160,7 +165,7 @@ Command to run when a deploy confirmation is waiting
 if cfg.enableDesktop then "${scripts.notifier-deploy}/bin/notifier-deploy" else null
 ```
 
-## [`nixos-utilities.services.autoUpgrade.gpgKeys`](../modules/autoUpgrade/options.nix#L166)
+## [`nixos-utilities.services.autoUpgrade.gpgKeys`](../modules/autoUpgrade/options.nix#L172)
 
 A list of GPG public key file paths. Each of this file should contains an armored GPG key.
 
@@ -168,7 +173,7 @@ A list of GPG public key file paths. Each of this file should contains an armore
 
 **Default:** `[ ]`
 
-## [`nixos-utilities.services.autoUpgrade.identification.hostname`](../modules/autoUpgrade/options.nix#L173)
+## [`nixos-utilities.services.autoUpgrade.identification.hostname`](../modules/autoUpgrade/options.nix#L179)
 
 
 The name of the configuration to evaluate and deploy. This value is used by comin to evaluate the flake output nixosConfigurations.“<hostname>” or darwinConfigurations.“<hostname>”. 
@@ -179,7 +184,7 @@ Defaults to networking.hostName - you MUST set either this option or networking.
 
 **Default:** `config.networking.hostName`
 
-## [`nixos-utilities.services.autoUpgrade.identification.machineId`](../modules/autoUpgrade/options.nix#L181)
+## [`nixos-utilities.services.autoUpgrade.identification.machineId`](../modules/autoUpgrade/options.nix#L187)
 
 
 The expected machine-id of the machine configured by comin. If not null, the configuration is only deployed when this specified machine-id is equal to the actual machine-id. 
@@ -191,7 +196,7 @@ Note it is only used by comin at evaluation.
 
 **Default:** `null`
 
-## [`nixos-utilities.services.autoUpgrade.remotes`](../modules/autoUpgrade/options.nix#L192)
+## [`nixos-utilities.services.autoUpgrade.remotes`](../modules/autoUpgrade/options.nix#L198)
 
 
 Git remotes to pull from
