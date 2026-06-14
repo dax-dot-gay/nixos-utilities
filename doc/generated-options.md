@@ -1,7 +1,7 @@
 # NixOS Module Options
 
 
-## [`options.nixos-utilities.services.autoUpgrade.enable`](autoUpgrade/options.nix#L16)
+## [`nixos-utilities.services.autoUpgrade.enable`](../modules/autoUpgrade/options.nix#L16)
 
 Whether to enable automatic system updates backed by comin.
 
@@ -11,7 +11,7 @@ Whether to enable automatic system updates backed by comin.
 
 **Example:** `true`
 
-## [`options.nixos-utilities.services.autoUpgrade.enableDesktop`](autoUpgrade/options.nix#L18)
+## [`nixos-utilities.services.autoUpgrade.enableDesktop`](../modules/autoUpgrade/options.nix#L18)
 
 Whether to enable 
 features relevant to a GUI environment:
@@ -24,13 +24,13 @@ features relevant to a GUI environment:
 
 **Example:** `true`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.package`](autoUpgrade/options.nix#L25)
+## [`nixos-utilities.services.autoUpgrade.comin.package`](../modules/autoUpgrade/options.nix#L25)
 
 Comin package to use
 
 **Type:** `types.nullOr types.package`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.debug`](autoUpgrade/options.nix#L30)
+## [`nixos-utilities.services.autoUpgrade.comin.debug`](../modules/autoUpgrade/options.nix#L30)
 
 comin debug mode (WARN: shows secrets)
 
@@ -38,7 +38,7 @@ comin debug mode (WARN: shows secrets)
 
 **Default:** `false`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.repositorySubdir`](autoUpgrade/options.nix#L35)
+## [`nixos-utilities.services.autoUpgrade.comin.repositorySubdir`](../modules/autoUpgrade/options.nix#L35)
 
 Subdirectory in the repository, containing a flake.nix file.
 
@@ -46,7 +46,7 @@ Subdirectory in the repository, containing a flake.nix file.
 
 **Default:** `"."`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.submodules`](autoUpgrade/options.nix#L40)
+## [`nixos-utilities.services.autoUpgrade.comin.submodules`](../modules/autoUpgrade/options.nix#L40)
 
 Whether to fetch and include Git submodules when cloning the repository. When enabled, this adds ?submodules=1 to the flake URL.
 
@@ -54,7 +54,7 @@ Whether to fetch and include Git submodules when cloning the repository. When en
 
 **Default:** `false`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.retention.deployment_boot_entry_capacity`](autoUpgrade/options.nix#L46)
+## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_boot_entry_capacity`](../modules/autoUpgrade/options.nix#L46)
 
 
 Number of boot entries to keep. Controls how many successful
@@ -66,7 +66,7 @@ with unique storepaths are retained.
 
 **Default:** `3`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.retention.deployment_successful_capacity`](autoUpgrade/options.nix#L55)
+## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_successful_capacity`](../modules/autoUpgrade/options.nix#L55)
 
 
 Number of successful deployments to keep. Includes all deployments
@@ -77,7 +77,7 @@ with status=done, regardless of operation type.
 
 **Default:** `3`
 
-## [`options.nixos-utilities.services.autoUpgrade.comin.retention.deployment_any_capacity`](autoUpgrade/options.nix#L63)
+## [`nixos-utilities.services.autoUpgrade.comin.retention.deployment_any_capacity`](../modules/autoUpgrade/options.nix#L63)
 
 
 Total number of deployments to keep. Includes all deployments
@@ -88,7 +88,7 @@ regardless of status (including failed deployments).
 
 **Default:** `5`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.enable`](autoUpgrade/options.nix#L77)
+## [`nixos-utilities.services.autoUpgrade.confirmation.build.enable`](../modules/autoUpgrade/options.nix#L77)
 
 Whether to enable 
 the build confirmer (`comin.buildConfirmer`)
@@ -101,7 +101,7 @@ Specifically, sets `comin.buildConfirmer.mode` to "without" if not enabled
 
 **Example:** `true`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.autoconfirm_duration`](autoUpgrade/options.nix#L81)
+## [`nixos-utilities.services.autoUpgrade.confirmation.build.autoconfirm_duration`](../modules/autoUpgrade/options.nix#L81)
 
 
 Duration for the autoconfirmer, or `null` to disable auto-confirmation
@@ -112,7 +112,7 @@ Implies `comin.buildConfirmer.mode` based on this setting
 
 **Default:** `null`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.build.confirmation_command`](autoUpgrade/options.nix#L89)
+## [`nixos-utilities.services.autoUpgrade.confirmation.build.confirmation_command`](../modules/autoUpgrade/options.nix#L89)
 
 Command to run when a build confirmation is waiting
 
@@ -124,7 +124,7 @@ Command to run when a build confirmation is waiting
 if cfg.enableDesktop then "${scripts.notifier-build}/bin/notifier-build" else null
 ```
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.enable`](autoUpgrade/options.nix#L96)
+## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.enable`](../modules/autoUpgrade/options.nix#L96)
 
 Whether to enable 
 the deploy confirmer (`comin.deployConfirmer`)
@@ -137,7 +137,7 @@ Specifically, sets `comin.deployConfirmer.mode` to "without" if not enabled
 
 **Example:** `true`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.autoconfirm_duration`](autoUpgrade/options.nix#L100)
+## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.autoconfirm_duration`](../modules/autoUpgrade/options.nix#L100)
 
 
 Duration for the autoconfirmer, or `null` to disable auto-confirmation
@@ -148,7 +148,7 @@ Implies `comin.deployConfirmer.mode` based on this setting
 
 **Default:** `null`
 
-## [`options.nixos-utilities.services.autoUpgrade.confirmation.deploy.confirmation_command`](autoUpgrade/options.nix#L108)
+## [`nixos-utilities.services.autoUpgrade.confirmation.deploy.confirmation_command`](../modules/autoUpgrade/options.nix#L108)
 
 Command to run when a deploy confirmation is waiting
 
@@ -160,7 +160,7 @@ Command to run when a deploy confirmation is waiting
 if cfg.enableDesktop then "${scripts.notifier-deploy}/bin/notifier-deploy" else null
 ```
 
-## [`options.nixos-utilities.services.autoUpgrade.gpgKeys`](autoUpgrade/options.nix#L166)
+## [`nixos-utilities.services.autoUpgrade.gpgKeys`](../modules/autoUpgrade/options.nix#L166)
 
 A list of GPG public key file paths. Each of this file should contains an armored GPG key.
 
@@ -168,7 +168,7 @@ A list of GPG public key file paths. Each of this file should contains an armore
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.services.autoUpgrade.identification.hostname`](autoUpgrade/options.nix#L173)
+## [`nixos-utilities.services.autoUpgrade.identification.hostname`](../modules/autoUpgrade/options.nix#L173)
 
 
 The name of the configuration to evaluate and deploy. This value is used by comin to evaluate the flake output nixosConfigurations.“<hostname>” or darwinConfigurations.“<hostname>”. 
@@ -179,7 +179,7 @@ Defaults to networking.hostName - you MUST set either this option or networking.
 
 **Default:** `config.networking.hostName`
 
-## [`options.nixos-utilities.services.autoUpgrade.identification.machineId`](autoUpgrade/options.nix#L181)
+## [`nixos-utilities.services.autoUpgrade.identification.machineId`](../modules/autoUpgrade/options.nix#L181)
 
 
 The expected machine-id of the machine configured by comin. If not null, the configuration is only deployed when this specified machine-id is equal to the actual machine-id. 
@@ -191,7 +191,7 @@ Note it is only used by comin at evaluation.
 
 **Default:** `null`
 
-## [`options.nixos-utilities.services.autoUpgrade.remotes`](autoUpgrade/options.nix#L192)
+## [`nixos-utilities.services.autoUpgrade.remotes`](../modules/autoUpgrade/options.nix#L192)
 
 
 Git remotes to pull from
@@ -275,7 +275,7 @@ types.listOf (
 )
 ```
 
-## [`options.nixos-utilities.systems.router.enable`](router/options.nix#L57)
+## [`nixos-utilities.systems.router.enable`](../modules/router/options.nix#L57)
 
 Whether to enable Enable router subsystem.
 
@@ -285,7 +285,7 @@ Whether to enable Enable router subsystem.
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.domain`](router/options.nix#L59)
+## [`nixos-utilities.systems.router.config.domain`](../modules/router/options.nix#L59)
 
 DNS search domain
 
@@ -293,7 +293,7 @@ DNS search domain
 
 **Example:** `"example.com"`
 
-## [`options.nixos-utilities.systems.router.config.nameservers`](router/options.nix#L64)
+## [`nixos-utilities.systems.router.config.nameservers`](../modules/router/options.nix#L64)
 
 Nameservers for /etc/resolv.conf
 
@@ -310,7 +310,7 @@ Nameservers for /etc/resolv.conf
 ]
 ```
 
-## [`options.nixos-utilities.systems.router.config.wan.type`](router/options.nix#L74)
+## [`nixos-utilities.systems.router.config.wan.type`](../modules/router/options.nix#L74)
 
 WAN type
 
@@ -326,7 +326,7 @@ types.enum [
 
 **Default:** `"dhcp"`
 
-## [`options.nixos-utilities.systems.router.config.wan.interface`](router/options.nix#L83)
+## [`nixos-utilities.systems.router.config.wan.interface`](../modules/router/options.nix#L83)
 
 WAN interface
 
@@ -334,7 +334,7 @@ WAN interface
 
 **Example:** `"eno1"`
 
-## [`options.nixos-utilities.systems.router.config.wan.cake.enable`](router/options.nix#L89)
+## [`nixos-utilities.systems.router.config.wan.cake.enable`](../modules/router/options.nix#L89)
 
 Whether to enable Enable CAKE on WAN.
 
@@ -344,7 +344,7 @@ Whether to enable Enable CAKE on WAN.
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.wan.cake.aggressiveness`](router/options.nix#L90)
+## [`nixos-utilities.systems.router.config.wan.cake.aggressiveness`](../modules/router/options.nix#L90)
 
 
 Options: "auto", "conservative", "moderate", "aggressive"
@@ -367,7 +367,7 @@ types.enum [
 
 **Default:** `"auto"`
 
-## [`options.nixos-utilities.systems.router.config.wan.cake.uploadBandwidth`](router/options.nix#L106)
+## [`nixos-utilities.systems.router.config.wan.cake.uploadBandwidth`](../modules/router/options.nix#L106)
 
 Optional upload bandwidth
 
@@ -377,7 +377,7 @@ Optional upload bandwidth
 
 **Example:** `"100Mbit"`
 
-## [`options.nixos-utilities.systems.router.config.wan.cake.downloadBandwidth`](router/options.nix#L112)
+## [`nixos-utilities.systems.router.config.wan.cake.downloadBandwidth`](../modules/router/options.nix#L112)
 
 Optional download bandwidth
 
@@ -387,7 +387,7 @@ Optional download bandwidth
 
 **Example:** `"100Mbit"`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv4.address`](router/options.nix#L121)
+## [`nixos-utilities.systems.router.config.wan.static.ipv4.address`](../modules/router/options.nix#L121)
 
 Static IPv4 address assigned to the WAN interface.
 
@@ -395,7 +395,7 @@ Static IPv4 address assigned to the WAN interface.
 
 **Default:** `"203.0.113.2"`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv4.prefixLength`](router/options.nix#L126)
+## [`nixos-utilities.systems.router.config.wan.static.ipv4.prefixLength`](../modules/router/options.nix#L126)
 
 Prefix length for the static IPv4 network.
 
@@ -403,7 +403,7 @@ Prefix length for the static IPv4 network.
 
 **Default:** `24`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv4.gateway`](router/options.nix#L131)
+## [`nixos-utilities.systems.router.config.wan.static.ipv4.gateway`](../modules/router/options.nix#L131)
 
 Default IPv4 gateway for static mode.
 
@@ -411,7 +411,7 @@ Default IPv4 gateway for static mode.
 
 **Default:** `null`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv6.enable`](router/options.nix#L138)
+## [`nixos-utilities.systems.router.config.wan.static.ipv6.enable`](../modules/router/options.nix#L138)
 
 Whether to enable Enable static IPv6 configuration on the WAN interface..
 
@@ -421,7 +421,7 @@ Whether to enable Enable static IPv6 configuration on the WAN interface..
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv6.address`](router/options.nix#L139)
+## [`nixos-utilities.systems.router.config.wan.static.ipv6.address`](../modules/router/options.nix#L139)
 
 Static IPv6 address in static mode.
 
@@ -429,7 +429,7 @@ Static IPv6 address in static mode.
 
 **Default:** `"2001:db8::2"`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv6.prefixLength`](router/options.nix#L144)
+## [`nixos-utilities.systems.router.config.wan.static.ipv6.prefixLength`](../modules/router/options.nix#L144)
 
 Prefix length for the static IPv6 network.
 
@@ -437,7 +437,7 @@ Prefix length for the static IPv6 network.
 
 **Default:** `64`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.ipv6.gateway`](router/options.nix#L149)
+## [`nixos-utilities.systems.router.config.wan.static.ipv6.gateway`](../modules/router/options.nix#L149)
 
 Default IPv6 gateway for static mode.
 
@@ -445,7 +445,7 @@ Default IPv6 gateway for static mode.
 
 **Default:** `null`
 
-## [`options.nixos-utilities.systems.router.config.wan.static.dnsServers`](router/options.nix#L155)
+## [`nixos-utilities.systems.router.config.wan.static.dnsServers`](../modules/router/options.nix#L155)
 
 DNS servers to use when static addressing is selected.
 
@@ -453,7 +453,7 @@ DNS servers to use when static addressing is selected.
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.systems.router.config.wan.pppoe.logicalInterface`](router/options.nix#L163)
+## [`nixos-utilities.systems.router.config.wan.pppoe.logicalInterface`](../modules/router/options.nix#L163)
 
 Name of the PPPoE interface created by pppd.
 
@@ -461,7 +461,7 @@ Name of the PPPoE interface created by pppd.
 
 **Default:** `"ppp0"`
 
-## [`options.nixos-utilities.systems.router.config.wan.pppoe.user`](router/options.nix#L168)
+## [`nixos-utilities.systems.router.config.wan.pppoe.user`](../modules/router/options.nix#L168)
 
 PPPoE username supplied by the ISP.
 
@@ -469,7 +469,7 @@ PPPoE username supplied by the ISP.
 
 **Default:** `""`
 
-## [`options.nixos-utilities.systems.router.config.wan.pppoe.passwordFile`](router/options.nix#L173)
+## [`nixos-utilities.systems.router.config.wan.pppoe.passwordFile`](../modules/router/options.nix#L173)
 
 Absolute path to the PPPoE password file.
 
@@ -477,7 +477,7 @@ Absolute path to the PPPoE password file.
 
 **Default:** `"/etc/nixos/secrets/pppoe-password"`
 
-## [`options.nixos-utilities.systems.router.config.wan.pppoe.service`](router/options.nix#L178)
+## [`nixos-utilities.systems.router.config.wan.pppoe.service`](../modules/router/options.nix#L178)
 
 Optional PPPoE service name.
 
@@ -485,7 +485,7 @@ Optional PPPoE service name.
 
 **Default:** `null`
 
-## [`options.nixos-utilities.systems.router.config.wan.pppoe.ipv6`](router/options.nix#L183)
+## [`nixos-utilities.systems.router.config.wan.pppoe.ipv6`](../modules/router/options.nix#L183)
 
 Enable IPv6 negotiation on the PPPoE session.
 
@@ -493,7 +493,7 @@ Enable IPv6 negotiation on the PPPoE session.
 
 **Default:** `true`
 
-## [`options.nixos-utilities.systems.router.config.wan.pppoe.mtu`](router/options.nix#L188)
+## [`nixos-utilities.systems.router.config.wan.pppoe.mtu`](../modules/router/options.nix#L188)
 
 Override MTU for the PPPoE session.
 
@@ -501,7 +501,7 @@ Override MTU for the PPPoE session.
 
 **Default:** `null`
 
-## [`options.nixos-utilities.systems.router.config.lan.isolation.enable`](router/options.nix#L197)
+## [`nixos-utilities.systems.router.config.lan.isolation.enable`](../modules/router/options.nix#L197)
 
 Whether to enable Enable NAT isolation.
 
@@ -511,7 +511,7 @@ Whether to enable Enable NAT isolation.
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.lan.isolation.exceptions`](router/options.nix#L198)
+## [`nixos-utilities.systems.router.config.lan.isolation.exceptions`](../modules/router/options.nix#L198)
 
 Isolation exceptions
 
@@ -545,7 +545,7 @@ types.listOf (
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.systems.router.config.lan.networks`](router/options.nix#L226)
+## [`nixos-utilities.systems.router.config.lan.networks`](../modules/router/options.nix#L226)
 
 Configuration of LAN networks
 
@@ -786,7 +786,7 @@ types.attrsOf (
 )
 ```
 
-## [`options.nixos-utilities.systems.router.config.lan.primaryNetwork`](router/options.nix#L461)
+## [`nixos-utilities.systems.router.config.lan.primaryNetwork`](../modules/router/options.nix#L461)
 
 Name of primary network for search domain
 
@@ -794,7 +794,7 @@ Name of primary network for search domain
 
 **Default:** `null`
 
-## [`options.nixos-utilities.systems.router.config.portForwarding`](router/options.nix#L467)
+## [`nixos-utilities.systems.router.config.portForwarding`](../modules/router/options.nix#L467)
 
 Port forwarding rules
 
@@ -802,7 +802,7 @@ Port forwarding rules
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.systems.router.config.dynamicDns.enable`](router/options.nix#L473)
+## [`nixos-utilities.systems.router.config.dynamicDns.enable`](../modules/router/options.nix#L473)
 
 Whether to enable Enable DynamicDNS with ddns-updater.
 
@@ -812,7 +812,7 @@ Whether to enable Enable DynamicDNS with ddns-updater.
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.dynamicDns.server_enabled`](router/options.nix#L474)
+## [`nixos-utilities.systems.router.config.dynamicDns.server_enabled`](../modules/router/options.nix#L474)
 
 Whether to enable Enable ddns-updater server (SERVER_ENABLED=yes/no).
 
@@ -822,7 +822,7 @@ Whether to enable Enable ddns-updater server (SERVER_ENABLED=yes/no).
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.dynamicDns.config_file`](router/options.nix#L475)
+## [`nixos-utilities.systems.router.config.dynamicDns.config_file`](../modules/router/options.nix#L475)
 
 Path to config file
 
@@ -830,7 +830,7 @@ Path to config file
 
 **Default:** `cfg.secrets.paths.dyndns-config`
 
-## [`options.nixos-utilities.systems.router.config.dynamicDns.period`](router/options.nix#L480)
+## [`nixos-utilities.systems.router.config.dynamicDns.period`](../modules/router/options.nix#L480)
 
 Period to update dyndns
 
@@ -838,7 +838,7 @@ Period to update dyndns
 
 **Default:** `"5m"`
 
-## [`options.nixos-utilities.systems.router.config.dynamicDns.extra_environment`](router/options.nix#L485)
+## [`nixos-utilities.systems.router.config.dynamicDns.extra_environment`](../modules/router/options.nix#L485)
 
 Additional envvars for ddns-updater
 
@@ -846,7 +846,7 @@ Additional envvars for ddns-updater
 
 **Default:** `{ }`
 
-## [`options.nixos-utilities.systems.router.config.dns.enable`](router/options.nix#L492)
+## [`nixos-utilities.systems.router.config.dns.enable`](../modules/router/options.nix#L492)
 
 Whether to enable Enable global DNS.
 
@@ -856,7 +856,7 @@ Whether to enable Enable global DNS.
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.dns.upstreamServers`](router/options.nix#L493)
+## [`nixos-utilities.systems.router.config.dns.upstreamServers`](../modules/router/options.nix#L493)
 
 Upstream DNS servers
 
@@ -879,7 +879,7 @@ Upstream DNS servers
 ]
 ```
 
-## [`options.nixos-utilities.systems.router.config.firewall.allowPing`](router/options.nix#L506)
+## [`nixos-utilities.systems.router.config.firewall.allowPing`](../modules/router/options.nix#L506)
 
 Allow ICMP echo requests on the firewall.
 
@@ -887,7 +887,7 @@ Allow ICMP echo requests on the firewall.
 
 **Default:** `true`
 
-## [`options.nixos-utilities.systems.router.config.firewall.allowedTCPPorts`](router/options.nix#L511)
+## [`nixos-utilities.systems.router.config.firewall.allowedTCPPorts`](../modules/router/options.nix#L511)
 
 TCP ports open on untrusted interfaces (e.g. WAN). Do not add SSH (22); it is only reachable from trusted LAN interfaces.
 
@@ -902,7 +902,7 @@ TCP ports open on untrusted interfaces (e.g. WAN). Do not add SSH (22); it is on
 ]
 ```
 
-## [`options.nixos-utilities.systems.router.config.firewall.allowedUDPPorts`](router/options.nix#L519)
+## [`nixos-utilities.systems.router.config.firewall.allowedUDPPorts`](../modules/router/options.nix#L519)
 
 UDP ports open on untrusted interfaces (e.g. WAN). Do not add DNS (53) or DHCP (67/68); they are opened only on LAN interfaces by the DNS module.
 
@@ -910,7 +910,7 @@ UDP ports open on untrusted interfaces (e.g. WAN). Do not add DNS (53) or DHCP (
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.systems.router.config.nat.enable`](router/options.nix#L526)
+## [`nixos-utilities.systems.router.config.nat.enable`](../modules/router/options.nix#L526)
 
 Whether to enable Enable NAT between LAN and WAN..
 
@@ -920,7 +920,7 @@ Whether to enable Enable NAT between LAN and WAN..
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.config.nat.externalInterface`](router/options.nix#L527)
+## [`nixos-utilities.systems.router.config.nat.externalInterface`](../modules/router/options.nix#L527)
 
 
 Interface used for outbound NAT. If left null, it is derived
@@ -931,7 +931,7 @@ from the WAN type (ppp0/pptp0 for PPP variants, otherwise the WAN physical inter
 
 **Default:** `null`
 
-## [`options.nixos-utilities.systems.router.config.nat.internalInterfaces`](router/options.nix#L535)
+## [`nixos-utilities.systems.router.config.nat.internalInterfaces`](../modules/router/options.nix#L535)
 
 Interfaces treated as internal networks for NAT.
 
@@ -939,7 +939,7 @@ Interfaces treated as internal networks for NAT.
 
 **Default:** `[ ]`
 
-## [`options.nixos-utilities.systems.router.config.nat.enableIPv6`](router/options.nix#L540)
+## [`nixos-utilities.systems.router.config.nat.enableIPv6`](../modules/router/options.nix#L540)
 
 Enable IPv6 masquerading (if supported).
 
@@ -947,7 +947,7 @@ Enable IPv6 masquerading (if supported).
 
 **Default:** `true`
 
-## [`options.nixos-utilities.systems.router.secrets.sops.enable`](router/options.nix#L549)
+## [`nixos-utilities.systems.router.secrets.sops.enable`](../modules/router/options.nix#L549)
 
 Whether to enable automatic sops-nix configuration (assumes sops-nix is already configured globally).
 
@@ -957,7 +957,7 @@ Whether to enable automatic sops-nix configuration (assumes sops-nix is already 
 
 **Example:** `true`
 
-## [`options.nixos-utilities.systems.router.secrets.sops.pppoe.username`](router/options.nix#L551)
+## [`nixos-utilities.systems.router.secrets.sops.pppoe.username`](../modules/router/options.nix#L551)
 
 Secret name for PPPOE username
 
@@ -965,7 +965,7 @@ Secret name for PPPOE username
 
 **Default:** `"pppoe-username"`
 
-## [`options.nixos-utilities.systems.router.secrets.sops.pppoe.password`](router/options.nix#L556)
+## [`nixos-utilities.systems.router.secrets.sops.pppoe.password`](../modules/router/options.nix#L556)
 
 Secret name for PPPOE password
 
@@ -973,7 +973,7 @@ Secret name for PPPOE password
 
 **Default:** `"pppoe-password"`
 
-## [`options.nixos-utilities.systems.router.secrets.sops.pppoe.config`](router/options.nix#L561)
+## [`nixos-utilities.systems.router.secrets.sops.pppoe.config`](../modules/router/options.nix#L561)
 
 Name of the PPPOE config file generated
 
@@ -981,7 +981,7 @@ Name of the PPPOE config file generated
 
 **Default:** `"pppoe-peer.conf"`
 
-## [`options.nixos-utilities.systems.router.secrets.sops.dyndns`](router/options.nix#L567)
+## [`nixos-utilities.systems.router.secrets.sops.dyndns`](../modules/router/options.nix#L567)
 
 Secret name for dyndns configuration
 
@@ -989,7 +989,7 @@ Secret name for dyndns configuration
 
 **Default:** `"ddns-updater.conf"`
 
-## [`options.nixos-utilities.systems.router.secrets.paths.pppoe-username`](router/options.nix#L574)
+## [`nixos-utilities.systems.router.secrets.paths.pppoe-username`](../modules/router/options.nix#L574)
 
 Path to pppoe-username secret
 
@@ -1001,7 +1001,7 @@ Path to pppoe-username secret
 mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.pppoe.username}.path
 ```
 
-## [`options.nixos-utilities.systems.router.secrets.paths.pppoe-password`](router/options.nix#L579)
+## [`nixos-utilities.systems.router.secrets.paths.pppoe-password`](../modules/router/options.nix#L579)
 
 Path to pppoe-password secret
 
@@ -1013,7 +1013,7 @@ Path to pppoe-password secret
 mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.pppoe.password}.path
 ```
 
-## [`options.nixos-utilities.systems.router.secrets.paths.pppoe-config`](router/options.nix#L584)
+## [`nixos-utilities.systems.router.secrets.paths.pppoe-config`](../modules/router/options.nix#L584)
 
 Path to pppoe-config secret
 
@@ -1025,7 +1025,7 @@ Path to pppoe-config secret
 mkIf cfg.secrets.sops.enable config.sops.templates.${cfg.secrets.sops.pppoe.config}.path
 ```
 
-## [`options.nixos-utilities.systems.router.secrets.paths.dyndns-config`](router/options.nix#L589)
+## [`nixos-utilities.systems.router.secrets.paths.dyndns-config`](../modules/router/options.nix#L589)
 
 Path to dyndns-config secret
 

@@ -18,7 +18,8 @@
         generate-docs.exec = '' # bash
             cd $(git rev-parse --show-toplevel)
             mkdir -p doc
-            nix-options-doc --path ./modules --out doc/generated-options.md
+            nix-options-doc --path ./modules --out doc/generated-options.md --strip-prefix
+            ${pkgs.gnused}/bin/sed -i 's/`](/`](..\/modules\//g' doc/generated-options.md
         '';
     };
 }
