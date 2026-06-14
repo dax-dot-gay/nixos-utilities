@@ -50,7 +50,7 @@ in
             };
             retention = {
                 deployment_boot_entry_capacity = mkOption {
-                    type = int;
+                    type = types.int;
                     default = 3;
                     description = ''
                         Number of boot entries to keep. Controls how many successful
@@ -59,7 +59,7 @@ in
                     '';
                 };
                 deployment_successful_capacity = mkOption {
-                    type = int;
+                    type = types.int;
                     default = 3;
                     description = ''
                         Number of successful deployments to keep. Includes all deployments
@@ -67,7 +67,7 @@ in
                     '';
                 };
                 deployment_any_capacity = mkOption {
-                    type = int;
+                    type = types.int;
                     default = 5;
                     description = ''
                         Total number of deployments to keep. Includes all deployments

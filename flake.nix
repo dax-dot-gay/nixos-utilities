@@ -40,7 +40,7 @@
                     }
                 );
             system = "x86_64-linux";
-            optionsDocFor = forEachSupportedSystem ({ pkgs, ... }: import ./util/generate-docs.nix pkgs);
+            optionsDocFor = forEachSupportedSystem ({ pkgs, ... }: import ./util/generate-docs.nix {inherit pkgs inputs;});
         in
         {
             /*
@@ -74,22 +74,22 @@
                     system = system;
                 };
             };
-            nixosConfigurations = forEachSupportedSystem ({system, pkgs, ...}: {
-                vms-router = pkgs.lib.nixosSystem {
+            nixosConfigurations = {
+                vms-router = nixpkgs.lib.nixosSystem {
                     inherit system;
                     specialArgs = { inherit inputs system; };
                     modules = [
-                        "${pkgs}/nixos/modules/virtualisation/proxmox-image.nix"
+                        "${nixpkgs}/nixos/modules/virtualisation/proxmox-image.nix"
                         self.nixosModules.default
                         inputs.comin.nixosModules.comin
                         inputs.sops-nix.nixosModules.sops
                         ./tests/vms/router
                     ];
                 };
-            });
-            packages = forEachSupportedSystem ({system, ...}: {
+            };
+            packages.x86_64-linux = {
                 vms-router-vma = self.nixosConfigurations.vms-router.config.system.build.VMA;
                 generate-module-options = optionsDocFor."${system}".optionsDocCommonMarkGenerator;
-            });
+            };
         };
 }
