@@ -29,13 +29,13 @@ let
             };
             uploadBandwidth = mkOption {
                 description = "Optional upload bandwidth";
-                type = mkNullOr types.singleLineStr;
+                type = types.nullOr types.singleLineStr;
                 default = null;
                 example = "100Mbit";
             };
             downloadBandwidth = mkOption {
                 description = "Optional download bandwidth";
-                type = mkNullOr types.singleLineStr;
+                type = types.nullOr types.singleLineStr;
                 default = null;
                 example = "100Mbit";
             };
