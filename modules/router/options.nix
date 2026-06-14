@@ -229,14 +229,14 @@ in
                             types.submodule (
                                 { config, ... }:
                                 let
-                                    netcfg = cfg.config.lan.networks.${config._module.args.name};
+                                    netcfg = cfg.config.lan.networks.${config._module.args.name or "*"};
                                 in
                                 {
                                     options = {
                                         name = mkOption {
                                             description = "Network name (should generally be left as the default)";
                                             type = types.singleLineStr;
-                                            default = config._module.args.name;
+                                            default = config._module.args.name or "";
                                         };
                                         ipv4 = mkOption {
                                             description = "IPv4 configuration";
@@ -327,7 +327,7 @@ in
                                                     Defaults to the provided gateway address(es) of this network
                                                 '';
                                                 type = types.listOf types.singleLineStr;
-                                                default = [ netcfg.ipv4.gateway ] ++ (optional netcfg.ipv6.enable netcfg.ipv6.gateway);
+                                                defaultText = "[ netcfg.ipv4.gateway ] ++ (optional netcfg.ipv6.enable netcfg.ipv6.gateway)";
                                             };
                                             dynamicDomain = mkOption {
                                                 description = ''
@@ -475,7 +475,7 @@ in
                     config_file = mkOption {
                         description = "Path to config file";
                         type = types.path;
-                        default = cfg.secrets.paths.dyndns-config;
+                        defaultText = "config.nixos-utilities.systems.router.secrets.paths.dyndns-config";
                     };
                     period = mkOption {
                         description = "Period to update dyndns";
@@ -574,22 +574,22 @@ in
                     pppoe-username = mkOption {
                         description = "Path to pppoe-username secret";
                         type = types.str;
-                        default = mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.pppoe.username}.path;
+                        defaultText = "mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.pppoe.username}.path";
                     };
                     pppoe-password = mkOption {
                         description = "Path to pppoe-password secret";
                         type = types.str;
-                        default = mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.pppoe.password}.path;
+                        defaultText = "mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.pppoe.password}.path";
                     };
                     pppoe-config = mkOption {
                         description = "Path to pppoe-config secret";
                         type = types.str;
-                        default = mkIf cfg.secrets.sops.enable config.sops.templates.${cfg.secrets.sops.pppoe.config}.path;
+                        defaultText = "mkIf cfg.secrets.sops.enable config.sops.templates.${cfg.secrets.sops.pppoe.config}.path";
                     };
                     dyndns-config = mkOption {
                         description = "Path to dyndns-config secret";
                         type = types.str;
-                        default = mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.dyndns}.path;
+                        defaultText = "mkIf cfg.secrets.sops.enable config.sops.secrets.${cfg.secrets.sops.dyndns}.path";
                     };
                 };
             };

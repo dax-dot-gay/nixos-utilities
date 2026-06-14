@@ -5,6 +5,7 @@ rec {
             eval = pkgs.lib.evalModules {
                 modules = [
                     (import ../modules/autoUpgrade/options.nix)
+                    (import ../modules/router/options.nix)
                     {
                         options = {
                             _module.args = pkgs.lib.mkOption {
@@ -32,7 +33,7 @@ rec {
         '';
     optionsDocCommonMarkGenerator = pkgs.writers.writeBashBin "optionsDocCommonMarkGenerator" ''
         cp -v ${optionsDocCommonMark} ./doc/generated-module-options.md
-        chmod u+w ./dos/generated-module-options.md
+        chmod u+w ./doc/generated-module-options.md
     '';
     checkOptionsDocCommonMark = pkgs.runCommand "check-options-doc.md" { } ''
         set +e
