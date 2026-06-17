@@ -338,11 +338,11 @@ in
                                 type = types.int;
                                 default = 60;
                             };
-                            timeout = mkOption {
-                                description = "Git fetch timeout in seconds.";
-                                type = types.int;
-                                default = 300;
-                            };
+                        };
+                        timeout = mkOption {
+                            description = "Git fetch timeout in seconds.";
+                            type = types.int;
+                            default = 300;
                         };
                     };
                 }
