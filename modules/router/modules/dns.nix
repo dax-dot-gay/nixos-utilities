@@ -353,7 +353,7 @@ in
                                 ${concatStringsSep "\n" (
                                     map (
                                         record:
-                                        "host-record=${record.hostname},${record.target}${
+                                        "host-record=${record.hostname},${record.ip}${
                                             if (record.comment or "") != "" && record.comment != null then "  # ${record.comment}" else ""
                                         }"
                                     ) allHostRecords.${key}
@@ -427,7 +427,7 @@ in
                                 ${concatStringsSep "\n" (
                                     map (
                                         record:
-                                        "host-record=${record.hostname},${record.target}${
+                                        "host-record=${record.hostname},${record.ip}${
                                             if (record.comment or "") != "" && record.comment != null then "  # ${record.comment}" else ""
                                         }"
                                     ) allHostRecords.${key}
