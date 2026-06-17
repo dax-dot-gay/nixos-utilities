@@ -161,7 +161,7 @@ let
         key: value:
         (lib.mapAttrsToList (name: record: {
             hostname = name;
-            ip = record.ip;
+            ip = record.target;
             comment = record.comment or "";
         }) (lib.filterAttrs (name: record: !lib.hasPrefix "*." name) (value.records.a_records or { })))
     ) dns;
@@ -353,7 +353,7 @@ in
                                 ${concatStringsSep "\n" (
                                     map (
                                         record:
-                                        "host-record=${record.hostname},${record.ip}${
+                                        "host-record=${record.hostname},${record.target}${
                                             if (record.comment or "") != "" && record.comment != null then "  # ${record.comment}" else ""
                                         }"
                                     ) allHostRecords.${key}
@@ -427,7 +427,7 @@ in
                                 ${concatStringsSep "\n" (
                                     map (
                                         record:
-                                        "host-record=${record.hostname},${record.ip}${
+                                        "host-record=${record.hostname},${record.target}${
                                             if (record.comment or "") != "" && record.comment != null then "  # ${record.comment}" else ""
                                         }"
                                     ) allHostRecords.${key}
